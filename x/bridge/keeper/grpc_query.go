@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/stafihub/stafihub/x/bridge/types"
+	"github.com/mezonhub/mezonhub/x/bridge/types"
 )
 
 var _ types.QueryServer = Keeper{}

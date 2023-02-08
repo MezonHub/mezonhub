@@ -10,8 +10,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/stafihub/stafihub/utils"
-	"github.com/stafihub/stafihub/x/bridge/types"
+	"github.com/mezonhub/mezonhub/utils"
+	"github.com/mezonhub/mezonhub/x/bridge/types"
 )
 
 type (

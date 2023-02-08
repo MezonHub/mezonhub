@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	testkeeper "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/testutil/sample"
-	"github.com/stafihub/stafihub/utils"
-	"github.com/stafihub/stafihub/x/ledger/types"
+	testkeeper "github.com/mezonhub/mezonhub/testutil/keeper"
+	"github.com/mezonhub/mezonhub/testutil/sample"
+	"github.com/mezonhub/mezonhub/utils"
+	"github.com/mezonhub/mezonhub/x/ledger/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -11,7 +11,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/version"
 	"github.com/spf13/cobra"
-	"github.com/stafihub/stafihub/x/rmintreward/types"
+	"github.com/mezonhub/mezonhub/x/rmintreward/types"
 )
 
 var _ = strconv.Itoa(0)
@@ -33,7 +33,7 @@ Where act.json could be like this:
     "lockedBlocks": 100,
     "tokenRewardInfos": [
         {
-            "denom": "ufis",
+            "denom": "umez",
             "rewardRate": "0.000001",
             "totalRewardAmount": "10000000",
             "leftAmount": "10000000",

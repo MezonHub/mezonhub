@@ -2,8 +2,8 @@ package relayers
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/relayers/keeper"
-	"github.com/stafihub/stafihub/x/relayers/types"
+	"github.com/mezonhub/mezonhub/x/relayers/keeper"
+	"github.com/mezonhub/mezonhub/x/relayers/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

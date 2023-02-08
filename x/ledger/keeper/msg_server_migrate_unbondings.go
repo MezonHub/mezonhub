@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/ledger/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/mezonhub/mezonhub/x/ledger/types"
+	sudotypes "github.com/mezonhub/mezonhub/x/sudo/types"
 )
 
 var zeroAddress [20]byte

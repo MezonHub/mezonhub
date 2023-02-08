@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authTypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	xBridgeTypes "github.com/stafihub/stafihub/x/bridge/types"
-	"github.com/stafihub/stafihub/x/ledger/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	xBridgeTypes "github.com/mezonhub/mezonhub/x/bridge/types"
+	"github.com/mezonhub/mezonhub/x/ledger/types"
+	sudotypes "github.com/mezonhub/mezonhub/x/sudo/types"
 )
 
 // Notice:

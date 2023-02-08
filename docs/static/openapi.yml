@@ -20906,10 +20906,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /stafihub/stafihub/bridge/banned_denom_list:
+  /mezonhub/mezonhub/bridge/banned_denom_list:
     get:
       summary: Queries a list of BannedDenomList items.
-      operationId: StafihubStafihubBridgeBannedDenomList
+      operationId: MezonhubMezonhubBridgeBannedDenomList
       responses:
         '200':
           description: A successful response.
@@ -20946,10 +20946,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/bridge/chaind_ids:
+  /mezonhub/mezonhub/bridge/chaind_ids:
     get:
       summary: Queries a list of ChaindIds items.
-      operationId: StafihubStafihubBridgeChaindIds
+      operationId: MezonhubMezonhubBridgeChaindIds
       responses:
         '200':
           description: A successful response.
@@ -20981,10 +20981,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/bridge/get_deposit_count/{chainId}':
+  '/mezonhub/mezonhub/bridge/get_deposit_count/{chainId}':
     get:
       summary: Queries a list of GetDepositCount items.
-      operationId: StafihubStafihubBridgeGetDepositCount
+      operationId: MezonhubMezonhubBridgeGetDepositCount
       responses:
         '200':
           description: A successful response.
@@ -21020,10 +21020,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/bridge/params:
+  /mezonhub/mezonhub/bridge/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubBridgeParams
+      operationId: MezonhubMezonhubBridgeParams
       responses:
         '200':
           description: A successful response.
@@ -21056,10 +21056,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/bridge/proposal_detail/{chainId}/{depositNonce}/{resourceId}/{amount}/{receiver}':
+  '/mezonhub/mezonhub/bridge/proposal_detail/{chainId}/{depositNonce}/{resourceId}/{amount}/{receiver}':
     get:
       summary: Queries a list of ProposalDetail items.
-      operationId: StafihubStafihubBridgeProposalDetail
+      operationId: MezonhubMezonhubBridgeProposalDetail
       responses:
         '200':
           description: A successful response.
@@ -21125,10 +21125,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/bridge/relay_fee/{chainId}':
+  '/mezonhub/mezonhub/bridge/relay_fee/{chainId}':
     get:
       summary: Queries a list of RelayFee items.
-      operationId: StafihubStafihubBridgeRelayFee
+      operationId: MezonhubMezonhubBridgeRelayFee
       responses:
         '200':
           description: A successful response.
@@ -21176,10 +21176,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/bridge/relay_fee_receiver:
+  /mezonhub/mezonhub/bridge/relay_fee_receiver:
     get:
       summary: Queries a list of RelayFeeReceiver items.
-      operationId: StafihubStafihubBridgeRelayFeeReceiver
+      operationId: MezonhubMezonhubBridgeRelayFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -21208,10 +21208,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/bridge/resourceid_to_denoms:
+  /mezonhub/mezonhub/bridge/resourceid_to_denoms:
     get:
       summary: Queries a list of ResourceidToDenoms items.
-      operationId: StafihubStafihubBridgeResourceidToDenoms
+      operationId: MezonhubMezonhubBridgeResourceidToDenoms
       responses:
         '200':
           description: A successful response.
@@ -21254,10 +21254,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/claim/claim_switch/{round}':
+  '/mezonhub/mezonhub/claim/claim_switch/{round}':
     get:
       summary: Queries a list of ClaimSwitch items.
-      operationId: StafihubStafihubClaimClaimSwitch
+      operationId: MezonhubMezonhubClaimClaimSwitch
       responses:
         '200':
           description: A successful response.
@@ -21292,10 +21292,10 @@ paths:
           format: uint64
       tags:
         - Query
-  '/stafihub/stafihub/claim/is_claimed/{round}/{index}':
+  '/mezonhub/mezonhub/claim/is_claimed/{round}/{index}':
     get:
       summary: Queries a list of IsClaimed items.
-      operationId: StafihubStafihubClaimIsClaimed
+      operationId: MezonhubMezonhubClaimIsClaimed
       responses:
         '200':
           description: A successful response.
@@ -21335,10 +21335,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /stafihub/stafihub/claim/params:
+  /mezonhub/mezonhub/claim/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubClaimParams
+      operationId: MezonhubMezonhubClaimParams
       responses:
         '200':
           description: A successful response.
@@ -21371,10 +21371,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/ledger/bonded_pools_by_denom/{denom}':
+  '/mezonhub/mezonhub/ledger/bonded_pools_by_denom/{denom}':
     get:
       summary: Queries a list of bondedPoolsByDenom items.
-      operationId: StafihubStafihubLedgerBondedPoolsByDenom
+      operationId: MezonhubMezonhubLedgerBondedPoolsByDenom
       responses:
         '200':
           description: A successful response.
@@ -21577,10 +21577,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/era_exchange_rate/{denom}/{era}':
+  '/mezonhub/mezonhub/ledger/era_exchange_rate/{denom}/{era}':
     get:
       summary: Queries a list of getEraExchangeRate items.
-      operationId: StafihubStafihubLedgerGetEraExchangeRate
+      operationId: MezonhubMezonhubLedgerGetEraExchangeRate
       responses:
         '200':
           description: A successful response.
@@ -21794,10 +21794,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/ledger/era_exchange_rates_by_denom/{denom}':
+  '/mezonhub/mezonhub/ledger/era_exchange_rates_by_denom/{denom}':
     get:
       summary: Queries a list of eraExchangeRatesByDenom items.
-      operationId: StafihubStafihubLedgerEraExchangeRatesByDenom
+      operationId: MezonhubMezonhubLedgerEraExchangeRatesByDenom
       responses:
         '200':
           description: A successful response.
@@ -22008,10 +22008,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/exchange_rate/{denom}':
+  '/mezonhub/mezonhub/ledger/exchange_rate/{denom}':
     get:
       summary: Queries a list of getExchangeRate items.
-      operationId: StafihubStafihubLedgerGetExchangeRate
+      operationId: MezonhubMezonhubLedgerGetExchangeRate
       responses:
         '200':
           description: A successful response.
@@ -22217,10 +22217,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/ledger/exchange_rate_all:
+  /mezonhub/mezonhub/ledger/exchange_rate_all:
     get:
       summary: Queries a list of exchangeRateAll items.
-      operationId: StafihubStafihubLedgerExchangeRateAll
+      operationId: MezonhubMezonhubLedgerExchangeRateAll
       responses:
         '200':
           description: A successful response.
@@ -22423,10 +22423,10 @@ paths:
                         }
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_bond_pipeline/{denom}/{pool}':
+  '/mezonhub/mezonhub/ledger/get_bond_pipeline/{denom}/{pool}':
     get:
       summary: Queries a list of getBondPipeline items.
-      operationId: StafihubStafihubLedgerGetBondPipeline
+      operationId: MezonhubMezonhubLedgerGetBondPipeline
       responses:
         '200':
           description: A successful response.
@@ -22645,10 +22645,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_bond_record/{denom}/{txhash}':
+  '/mezonhub/mezonhub/ledger/get_bond_record/{denom}/{txhash}':
     get:
       summary: Queries a list of getBondRecord items.
-      operationId: StafihubStafihubLedgerGetBondRecord
+      operationId: MezonhubMezonhubLedgerGetBondRecord
       responses:
         '200':
           description: A successful response.
@@ -22874,10 +22874,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_chain_era/{denom}':
+  '/mezonhub/mezonhub/ledger/get_chain_era/{denom}':
     get:
       summary: Queries a list of getChainEra items.
-      operationId: StafihubStafihubLedgerGetChainEra
+      operationId: MezonhubMezonhubLedgerGetChainEra
       responses:
         '200':
           description: A successful response.
@@ -23079,10 +23079,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_current_era_snapshot/{denom}':
+  '/mezonhub/mezonhub/ledger/get_current_era_snapshot/{denom}':
     get:
       summary: Queries a list of getCurrentEraSnapshot items.
-      operationId: StafihubStafihubLedgerGetCurrentEraSnapshot
+      operationId: MezonhubMezonhubLedgerGetCurrentEraSnapshot
       responses:
         '200':
           description: A successful response.
@@ -23285,10 +23285,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_era_snapshot/{denom}/{era}':
+  '/mezonhub/mezonhub/ledger/get_era_snapshot/{denom}/{era}':
     get:
       summary: Queries a list of getEraSnapshot items.
-      operationId: StafihubStafihubLedgerGetEraSnapshot
+      operationId: MezonhubMezonhubLedgerGetEraSnapshot
       responses:
         '200':
           description: A successful response.
@@ -23496,10 +23496,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_era_unbond_limit/{denom}':
+  '/mezonhub/mezonhub/ledger/get_era_unbond_limit/{denom}':
     get:
       summary: Queries a list of getEraUnbondLimit items.
-      operationId: StafihubStafihubLedgerGetEraUnbondLimit
+      operationId: MezonhubMezonhubLedgerGetEraUnbondLimit
       responses:
         '200':
           description: A successful response.
@@ -23701,10 +23701,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_pool_detail/{denom}/{pool}':
+  '/mezonhub/mezonhub/ledger/get_pool_detail/{denom}/{pool}':
     get:
       summary: Queries a list of getPoolDetail items.
-      operationId: StafihubStafihubLedgerGetPoolDetail
+      operationId: MezonhubMezonhubLedgerGetPoolDetail
       responses:
         '200':
           description: A successful response.
@@ -23928,10 +23928,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_r_params/{denom}':
+  '/mezonhub/mezonhub/ledger/get_r_params/{denom}':
     get:
       summary: Queries a list of GetRParams items.
-      operationId: StafihubStafihubLedgerGetRParams
+      operationId: MezonhubMezonhubLedgerGetRParams
       responses:
         '200':
           description: A successful response.
@@ -24148,10 +24148,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/ledger/get_signature:
+  /mezonhub/mezonhub/ledger/get_signature:
     get:
       summary: Queries a list of getSignature items.
-      operationId: StafihubStafihubLedgerGetSignature
+      operationId: MezonhubMezonhubLedgerGetSignature
       responses:
         '200':
           description: A successful response.
@@ -24400,10 +24400,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_snapshot/{shotId}':
+  '/mezonhub/mezonhub/ledger/get_snapshot/{shotId}':
     get:
       summary: Queries a list of getSnapshot items.
-      operationId: StafihubStafihubLedgerGetSnapshot
+      operationId: MezonhubMezonhubLedgerGetSnapshot
       responses:
         '200':
           description: A successful response.
@@ -24630,10 +24630,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/ledger/get_staking_reward_commission:
+  /mezonhub/mezonhub/ledger/get_staking_reward_commission:
     get:
       summary: Queries a list of getCommission items.
-      operationId: StafihubStafihubLedgerGetStakingRewardCommission
+      operationId: MezonhubMezonhubLedgerGetStakingRewardCommission
       responses:
         '200':
           description: A successful response.
@@ -24834,10 +24834,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_total_expected_active/{denom}/{era}':
+  '/mezonhub/mezonhub/ledger/get_total_expected_active/{denom}/{era}':
     get:
       summary: Queries a list of getTotalExpectedActive items.
-      operationId: StafihubStafihubLedgerGetTotalExpectedActive
+      operationId: MezonhubMezonhubLedgerGetTotalExpectedActive
       responses:
         '200':
           description: A successful response.
@@ -25043,10 +25043,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/ledger/get_unbond_commission:
+  /mezonhub/mezonhub/ledger/get_unbond_commission:
     get:
       summary: Queries a list of getUnbondCommission items.
-      operationId: StafihubStafihubLedgerGetUnbondCommission
+      operationId: MezonhubMezonhubLedgerGetUnbondCommission
       responses:
         '200':
           description: A successful response.
@@ -25247,10 +25247,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_unbond_relay_fee/{denom}':
+  '/mezonhub/mezonhub/ledger/get_unbond_relay_fee/{denom}':
     get:
       summary: Queries a list of getUnbondFee items.
-      operationId: StafihubStafihubLedgerGetUnbondRelayFee
+      operationId: MezonhubMezonhubLedgerGetUnbondRelayFee
       responses:
         '200':
           description: A successful response.
@@ -25469,10 +25469,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/ica_pool_list/{denom}':
+  '/mezonhub/mezonhub/ledger/ica_pool_list/{denom}':
     get:
       summary: Queries a list of IcaPoolList items.
-      operationId: StafihubStafihubLedgerIcaPoolList
+      operationId: MezonhubMezonhubLedgerIcaPoolList
       responses:
         '200':
           description: A successful response.
@@ -25728,10 +25728,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/interchain_tx_status/{propId}':
+  '/mezonhub/mezonhub/ledger/interchain_tx_status/{propId}':
     get:
       summary: Queries a list of InterchainTxStatus items.
-      operationId: StafihubStafihubLedgerInterchainTxStatus
+      operationId: MezonhubMezonhubLedgerInterchainTxStatus
       responses:
         '200':
           description: A successful response.
@@ -25938,10 +25938,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/pool_unbond_next_sequence/{denom}/{pool}/{unlockEra}':
+  '/mezonhub/mezonhub/ledger/pool_unbond_next_sequence/{denom}/{pool}/{unlockEra}':
     get:
       summary: Queries a list of PoolUnbondNextSequence items.
-      operationId: StafihubStafihubLedgerPoolUnbondNextSequence
+      operationId: MezonhubMezonhubLedgerPoolUnbondNextSequence
       responses:
         '200':
           description: A successful response.
@@ -26152,10 +26152,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/ledger/pool_unbondings/{denom}/{pool}/{unlockEra}':
+  '/mezonhub/mezonhub/ledger/pool_unbondings/{denom}/{pool}/{unlockEra}':
     get:
       summary: Queries a list of PoolUnbondings items.
-      operationId: StafihubStafihubLedgerPoolUnbondings
+      operationId: MezonhubMezonhubLedgerPoolUnbondings
       responses:
         '200':
           description: A successful response.
@@ -26374,10 +26374,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/ledger/protocol_fee_receiver:
+  /mezonhub/mezonhub/ledger/protocol_fee_receiver:
     get:
       summary: Queries a list of getReceiver items.
-      operationId: StafihubStafihubLedgerGetProtocolFeeReceiver
+      operationId: MezonhubMezonhubLedgerGetProtocolFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -26573,10 +26573,10 @@ paths:
                         }
       tags:
         - Query
-  '/stafihub/stafihub/ledger/relay_fee_receiver/{denom}':
+  '/mezonhub/mezonhub/ledger/relay_fee_receiver/{denom}':
     get:
       summary: Queries a list of RelayFeeReceiver items.
-      operationId: StafihubStafihubLedgerRelayFeeReceiver
+      operationId: MezonhubMezonhubLedgerRelayFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -26777,10 +26777,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/ledger/total_protocol_fee:
+  /mezonhub/mezonhub/ledger/total_protocol_fee:
     get:
       summary: Queries a list of TotalFeeList items.
-      operationId: StafihubStafihubLedgerTotalProtocolFee
+      operationId: MezonhubMezonhubLedgerTotalProtocolFee
       responses:
         '200':
           description: A successful response.
@@ -26983,10 +26983,10 @@ paths:
                         }
       tags:
         - Query
-  '/stafihub/stafihub/ledger/unbond_switch/{denom}':
+  '/mezonhub/mezonhub/ledger/unbond_switch/{denom}':
     get:
       summary: Queries a list of UnbondSwitch items.
-      operationId: StafihubStafihubLedgerUnbondSwitch
+      operationId: MezonhubMezonhubLedgerUnbondSwitch
       responses:
         '200':
           description: A successful response.
@@ -27187,10 +27187,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/mining/max_reward_pool_number:
+  /mezonhub/mezonhub/mining/max_reward_pool_number:
     get:
       summary: Queries a list of MaxRewardPoolNumber items.
-      operationId: StafihubStafihubMiningMaxRewardPoolNumber
+      operationId: MezonhubMezonhubMiningMaxRewardPoolNumber
       responses:
         '200':
           description: A successful response.
@@ -27220,10 +27220,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/max_stake_item_number:
+  /mezonhub/mezonhub/mining/max_stake_item_number:
     get:
       summary: Queries a list of MaxStakeItemNumber items.
-      operationId: StafihubStafihubMiningMaxStakeItemNumber
+      operationId: MezonhubMezonhubMiningMaxStakeItemNumber
       responses:
         '200':
           description: A successful response.
@@ -27253,10 +27253,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/mining_provider_list:
+  /mezonhub/mezonhub/mining/mining_provider_list:
     get:
       summary: Queries a list of MiningProviderList items.
-      operationId: StafihubStafihubMiningMiningProviderList
+      operationId: MezonhubMezonhubMiningMiningProviderList
       responses:
         '200':
           description: A successful response.
@@ -27287,10 +27287,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/params:
+  /mezonhub/mezonhub/mining/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubMiningParams
+      operationId: MezonhubMezonhubMiningParams
       responses:
         '200':
           description: A successful response.
@@ -27323,10 +27323,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/provider_switch:
+  /mezonhub/mezonhub/mining/provider_switch:
     get:
       summary: Queries a list of ProviderSwitch items.
-      operationId: StafihubStafihubMiningProviderSwitch
+      operationId: MezonhubMezonhubMiningProviderSwitch
       responses:
         '200':
           description: A successful response.
@@ -27355,10 +27355,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/reward_token_list:
+  /mezonhub/mezonhub/mining/reward_token_list:
     get:
       summary: Queries a list of RewardTokenList items.
-      operationId: StafihubStafihubMiningRewardTokenList
+      operationId: MezonhubMezonhubMiningRewardTokenList
       responses:
         '200':
           description: A successful response.
@@ -27396,10 +27396,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/stake_item_list:
+  /mezonhub/mezonhub/mining/stake_item_list:
     get:
       summary: Queries a list of StakeItemList items.
-      operationId: StafihubStafihubMiningStakeItemList
+      operationId: MezonhubMezonhubMiningStakeItemList
       responses:
         '200':
           description: A successful response.
@@ -27451,10 +27451,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_pool_info/{stakePoolIndex}':
+  '/mezonhub/mezonhub/mining/stake_pool_info/{stakePoolIndex}':
     get:
       summary: Queries a list of StakePoolInfo items.
-      operationId: StafihubStafihubMiningStakePoolInfo
+      operationId: MezonhubMezonhubMiningStakePoolInfo
       responses:
         '200':
           description: A successful response.
@@ -27533,10 +27533,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/mining/stake_pool_list:
+  /mezonhub/mezonhub/mining/stake_pool_list:
     get:
       summary: Queries a list of StakePoolList items.
-      operationId: StafihubStafihubMiningStakePoolList
+      operationId: MezonhubMezonhubMiningStakePoolList
       responses:
         '200':
           description: A successful response.
@@ -27611,10 +27611,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_record/{userAddress}/{stakePoolIndex}/{stakeRecordIndex}':
+  '/mezonhub/mezonhub/mining/stake_record/{userAddress}/{stakePoolIndex}/{stakeRecordIndex}':
     get:
       summary: Queries a list of StakeRecord items.
-      operationId: StafihubStafihubMiningStakeRecord
+      operationId: MezonhubMezonhubMiningStakeRecord
       responses:
         '200':
           description: A successful response.
@@ -27696,10 +27696,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_record_count/{userAddress}/{stakePoolIndex}':
+  '/mezonhub/mezonhub/mining/stake_record_count/{userAddress}/{stakePoolIndex}':
     get:
       summary: Queries a list of StakeRecordCount items.
-      operationId: StafihubStafihubMiningStakeRecordCount
+      operationId: MezonhubMezonhubMiningStakeRecordCount
       responses:
         '200':
           description: A successful response.
@@ -27739,10 +27739,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_record_list/{userAddress}/{stakePoolIndex}':
+  '/mezonhub/mezonhub/mining/stake_record_list/{userAddress}/{stakePoolIndex}':
     get:
       summary: Queries a list of StakeRecordList items.
-      operationId: StafihubStafihubMiningStakeRecordList
+      operationId: MezonhubMezonhubMiningStakeRecordList
       responses:
         '200':
           description: A successful response.
@@ -27821,10 +27821,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_reward/{stakeUserAddress}/{stakePoolIndex}/{stakeRecordIndex}':
+  '/mezonhub/mezonhub/mining/stake_reward/{stakeUserAddress}/{stakePoolIndex}/{stakeRecordIndex}':
     get:
       summary: Queries a list of StakeReward items.
-      operationId: StafihubStafihubMiningStakeReward
+      operationId: MezonhubMezonhubMiningStakeReward
       responses:
         '200':
           description: A successful response.
@@ -27883,10 +27883,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/rbank/address_prefix/{denom}':
+  '/mezonhub/mezonhub/rbank/address_prefix/{denom}':
     get:
       summary: Queries a list of AddressPrefix items.
-      operationId: StafihubStafihubRbankAddressPrefix
+      operationId: MezonhubMezonhubRbankAddressPrefix
       responses:
         '200':
           description: A successful response.
@@ -27922,10 +27922,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/rbank/params:
+  /mezonhub/mezonhub/rbank/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRbankParams
+      operationId: MezonhubMezonhubRbankParams
       responses:
         '200':
           description: A successful response.
@@ -27958,10 +27958,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rdex/params:
+  /mezonhub/mezonhub/rdex/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRdexParams
+      operationId: MezonhubMezonhubRdexParams
       responses:
         '200':
           description: A successful response.
@@ -27994,10 +27994,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rdex/pool_creator_list:
+  /mezonhub/mezonhub/rdex/pool_creator_list:
     get:
       summary: Queries a list of PoolCreatorList items.
-      operationId: StafihubStafihubRdexPoolCreatorList
+      operationId: MezonhubMezonhubRdexPoolCreatorList
       responses:
         '200':
           description: A successful response.
@@ -28028,10 +28028,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rdex/provider_list:
+  /mezonhub/mezonhub/rdex/provider_list:
     get:
       summary: Queries a list of ProviderList items.
-      operationId: StafihubStafihubRdexProviderList
+      operationId: MezonhubMezonhubRdexProviderList
       responses:
         '200':
           description: A successful response.
@@ -28062,10 +28062,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rdex/provider_switch:
+  /mezonhub/mezonhub/rdex/provider_switch:
     get:
       summary: Queries a list of ProviderSwitch items.
-      operationId: StafihubStafihubRdexProviderSwitch
+      operationId: MezonhubMezonhubRdexProviderSwitch
       responses:
         '200':
           description: A successful response.
@@ -28094,10 +28094,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/rdex/swap_pool_info/{lpDenom}':
+  '/mezonhub/mezonhub/rdex/swap_pool_info/{lpDenom}':
     get:
       summary: Queries a list of SwapPoolInfo items.
-      operationId: StafihubStafihubRdexSwapPoolInfo
+      operationId: MezonhubMezonhubRdexSwapPoolInfo
       responses:
         '200':
           description: A successful response.
@@ -28180,10 +28180,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/rdex/swap_pool_list:
+  /mezonhub/mezonhub/rdex/swap_pool_list:
     get:
       summary: Queries a list of SwapPoolList items.
-      operationId: StafihubStafihubRdexSwapPoolList
+      operationId: MezonhubMezonhubRdexSwapPoolList
       responses:
         '200':
           description: A successful response.
@@ -28263,10 +28263,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/relayers/threshold/{arena}/{denom}':
+  '/mezonhub/mezonhub/relayers/threshold/{arena}/{denom}':
     get:
       summary: Queries a threshold by denom.
-      operationId: StafihubStafihubRelayersThreshold
+      operationId: MezonhubMezonhubRelayersThreshold
       responses:
         '200':
           description: A successful response.
@@ -28305,10 +28305,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/relayers/{arena}/{denom}':
+  '/mezonhub/mezonhub/relayers/{arena}/{denom}':
     get:
       summary: Queries a list of relayersByDenom items.
-      operationId: StafihubStafihubRelayersRelayers
+      operationId: MezonhubMezonhubRelayersRelayers
       responses:
         '200':
           description: A successful response.
@@ -28348,10 +28348,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/act_current_cycle/{denom}':
+  '/mezonhub/mezonhub/rmintreward/act_current_cycle/{denom}':
     get:
       summary: Queries a list of ActCurrentCycle items.
-      operationId: StafihubStafihubRmintrewardActCurrentCycle
+      operationId: MezonhubMezonhubRmintrewardActCurrentCycle
       responses:
         '200':
           description: A successful response.
@@ -28386,10 +28386,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/act_detail/{denom}/{cycle}':
+  '/mezonhub/mezonhub/rmintreward/act_detail/{denom}/{cycle}':
     get:
       summary: Queries a list of ActDetail items.
-      operationId: StafihubStafihubRmintrewardActDetail
+      operationId: MezonhubMezonhubRmintrewardActDetail
       responses:
         '200':
           description: A successful response.
@@ -28457,10 +28457,10 @@ paths:
           format: uint64
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/act_latest_cycle/{denom}':
+  '/mezonhub/mezonhub/rmintreward/act_latest_cycle/{denom}':
     get:
       summary: Queries a list of ActLatestCycle items.
-      operationId: StafihubStafihubRmintrewardActLatestCycle
+      operationId: MezonhubMezonhubRmintrewardActLatestCycle
       responses:
         '200':
           description: A successful response.
@@ -28495,10 +28495,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/claim_info_detail/{address}/{denom}/{cycle}/{mintIndex}':
+  '/mezonhub/mezonhub/rmintreward/claim_info_detail/{address}/{denom}/{cycle}/{mintIndex}':
     get:
       summary: Queries a list of ClaimInfoDetail items.
-      operationId: StafihubStafihubRmintrewardClaimInfoDetail
+      operationId: MezonhubMezonhubRmintrewardClaimInfoDetail
       responses:
         '200':
           description: A successful response.
@@ -28568,10 +28568,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /stafihub/stafihub/rmintreward/params:
+  /mezonhub/mezonhub/rmintreward/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRmintrewardParams
+      operationId: MezonhubMezonhubRmintrewardParams
       responses:
         '200':
           description: A successful response.
@@ -28604,10 +28604,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/user_acts/{address}/{denom}':
+  '/mezonhub/mezonhub/rmintreward/user_acts/{address}/{denom}':
     get:
       summary: Queries a list of UserActs items.
-      operationId: StafihubStafihubRmintrewardUserActs
+      operationId: MezonhubMezonhubRmintrewardUserActs
       responses:
         '200':
           description: A successful response.
@@ -28651,10 +28651,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/user_mint_count/{address}/{denom}/{cycle}':
+  '/mezonhub/mezonhub/rmintreward/user_mint_count/{address}/{denom}/{cycle}':
     get:
       summary: Queries a list of UserMintCount items.
-      operationId: StafihubStafihubRmintrewardUserMintCount
+      operationId: MezonhubMezonhubRmintrewardUserMintCount
       responses:
         '200':
           description: A successful response.
@@ -28698,10 +28698,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /stafihub/stafihub/rstaking/delegator_whitelist:
+  /mezonhub/mezonhub/rstaking/delegator_whitelist:
     get:
       summary: Queries a list of DelegatorWhitelist items.
-      operationId: StafihubStafihubRstakingDelegatorWhitelist
+      operationId: MezonhubMezonhubRstakingDelegatorWhitelist
       responses:
         '200':
           description: A successful response.
@@ -28732,10 +28732,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/delegator_whitelist_switch:
+  /mezonhub/mezonhub/rstaking/delegator_whitelist_switch:
     get:
       summary: Queries a list of DelegatorWhitelistSwitch items.
-      operationId: StafihubStafihubRstakingDelegatorWhitelistSwitch
+      operationId: MezonhubMezonhubRstakingDelegatorWhitelistSwitch
       responses:
         '200':
           description: A successful response.
@@ -28764,10 +28764,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/inflation_base:
+  /mezonhub/mezonhub/rstaking/inflation_base:
     get:
       summary: Queries a list of InflationBase items.
-      operationId: StafihubStafihubRstakingInflationBase
+      operationId: MezonhubMezonhubRstakingInflationBase
       responses:
         '200':
           description: A successful response.
@@ -28796,10 +28796,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/params:
+  /mezonhub/mezonhub/rstaking/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRstakingParams
+      operationId: MezonhubMezonhubRstakingParams
       responses:
         '200':
           description: A successful response.
@@ -28832,10 +28832,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/validator_whitelist:
+  /mezonhub/mezonhub/rstaking/validator_whitelist:
     get:
       summary: Queries a list of ValidatorWhitelist items.
-      operationId: StafihubStafihubRstakingValidatorWhitelist
+      operationId: MezonhubMezonhubRstakingValidatorWhitelist
       responses:
         '200':
           description: A successful response.
@@ -28866,10 +28866,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/validator_whitelist_switch:
+  /mezonhub/mezonhub/rstaking/validator_whitelist_switch:
     get:
       summary: Queries a list of WhitelistSwitch items.
-      operationId: StafihubStafihubRstakingValidatorWhitelistSwitch
+      operationId: MezonhubMezonhubRstakingValidatorWhitelistSwitch
       responses:
         '200':
           description: A successful response.
@@ -28898,10 +28898,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/cycle_seconds/{denom}':
+  '/mezonhub/mezonhub/rvalidator/cycle_seconds/{denom}':
     get:
       summary: Queries a list of CycleSeconds items.
-      operationId: StafihubStafihubRvalidatorCycleSeconds
+      operationId: MezonhubMezonhubRvalidatorCycleSeconds
       responses:
         '200':
           description: A successful response.
@@ -28944,10 +28944,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/latest_dealed_cycle/{denom}/{poolAddress}':
+  '/mezonhub/mezonhub/rvalidator/latest_dealed_cycle/{denom}/{poolAddress}':
     get:
       summary: Queries a list of LatestDealedCycle items.
-      operationId: StafihubStafihubRvalidatorLatestDealedCycle
+      operationId: MezonhubMezonhubRvalidatorLatestDealedCycle
       responses:
         '200':
           description: A successful response.
@@ -28996,10 +28996,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/latest_voted_cycle/{denom}/{poolAddress}':
+  '/mezonhub/mezonhub/rvalidator/latest_voted_cycle/{denom}/{poolAddress}':
     get:
       summary: Queries a list of LatestVotedCycle items.
-      operationId: StafihubStafihubRvalidatorLatestVotedCycle
+      operationId: MezonhubMezonhubRvalidatorLatestVotedCycle
       responses:
         '200':
           description: A successful response.
@@ -29048,10 +29048,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/rvalidator/params:
+  /mezonhub/mezonhub/rvalidator/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRvalidatorParams
+      operationId: MezonhubMezonhubRvalidatorParams
       responses:
         '200':
           description: A successful response.
@@ -29084,10 +29084,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/r_validator_list/{denom}/{poolAddress}':
+  '/mezonhub/mezonhub/rvalidator/r_validator_list/{denom}/{poolAddress}':
     get:
       summary: Queries a list of RValidatorList items.
-      operationId: StafihubStafihubRvalidatorRValidatorList
+      operationId: MezonhubMezonhubRvalidatorRValidatorList
       responses:
         '200':
           description: A successful response.
@@ -29127,10 +29127,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/shuffle_seconds/{denom}':
+  '/mezonhub/mezonhub/rvalidator/shuffle_seconds/{denom}':
     get:
       summary: Queries a list of ShuffleSeconds items.
-      operationId: StafihubStafihubRvalidatorShuffleSeconds
+      operationId: MezonhubMezonhubRvalidatorShuffleSeconds
       responses:
         '200':
           description: A successful response.
@@ -29173,10 +29173,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rvote/get_proposal/{propId}':
+  '/mezonhub/mezonhub/rvote/get_proposal/{propId}':
     get:
       summary: Queries a list of getProposal items.
-      operationId: StafihubStafihubRvoteGetProposal
+      operationId: MezonhubMezonhubRvoteGetProposal
       responses:
         '200':
           description: A successful response.
@@ -29377,10 +29377,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/rvote/get_proposal_life:
+  /mezonhub/mezonhub/rvote/get_proposal_life:
     get:
       summary: Queries a list of getProposalLife items.
-      operationId: StafihubStafihubRvoteGetProposalLife
+      operationId: MezonhubMezonhubRvoteGetProposalLife
       responses:
         '200':
           description: A successful response.
@@ -29577,10 +29577,10 @@ paths:
                         }
       tags:
         - Query
-  /stafihub/stafihub/sudo/admin:
+  /mezonhub/mezonhub/sudo/admin:
     get:
       summary: Queries a list of admin items.
-      operationId: StafihubStafihubSudoAdmin
+      operationId: MezonhubMezonhubSudoAdmin
       responses:
         '200':
           description: A successful response.
@@ -45373,7 +45373,7 @@ definitions:
     description: |-
       Version defines the versioning scheme used to negotiate the IBC verison in
       the connection handshake.
-  stafihub.stafihub.bridge.BannedDenom:
+  mezonhub.mezonhub.bridge.BannedDenom:
     type: object
     properties:
       chainId:
@@ -45381,35 +45381,35 @@ definitions:
         format: int64
       denom:
         type: string
-  stafihub.stafihub.bridge.DenomType:
+  mezonhub.mezonhub.bridge.DenomType:
     type: string
     enum:
       - UNSPECIFIED
       - NATIVE
       - EXTERNAL
     default: UNSPECIFIED
-  stafihub.stafihub.bridge.MsgAddBannedDenomResponse:
+  mezonhub.mezonhub.bridge.MsgAddBannedDenomResponse:
     type: object
-  stafihub.stafihub.bridge.MsgAddChainIdResponse:
+  mezonhub.mezonhub.bridge.MsgAddChainIdResponse:
     type: object
-  stafihub.stafihub.bridge.MsgDepositResponse:
+  mezonhub.mezonhub.bridge.MsgDepositResponse:
     type: object
-  stafihub.stafihub.bridge.MsgRmBannedDenomResponse:
+  mezonhub.mezonhub.bridge.MsgRmBannedDenomResponse:
     type: object
-  stafihub.stafihub.bridge.MsgRmChainIdResponse:
+  mezonhub.mezonhub.bridge.MsgRmChainIdResponse:
     type: object
-  stafihub.stafihub.bridge.MsgSetRelayFeeReceiverResponse:
+  mezonhub.mezonhub.bridge.MsgSetRelayFeeReceiverResponse:
     type: object
-  stafihub.stafihub.bridge.MsgSetRelayFeeResponse:
+  mezonhub.mezonhub.bridge.MsgSetRelayFeeResponse:
     type: object
-  stafihub.stafihub.bridge.MsgSetResourceidToDenomResponse:
+  mezonhub.mezonhub.bridge.MsgSetResourceidToDenomResponse:
     type: object
-  stafihub.stafihub.bridge.MsgVoteProposalResponse:
+  mezonhub.mezonhub.bridge.MsgVoteProposalResponse:
     type: object
-  stafihub.stafihub.bridge.Params:
+  mezonhub.mezonhub.bridge.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.bridge.Proposal:
+  mezonhub.mezonhub.bridge.Proposal:
     type: object
     properties:
       content:
@@ -45425,14 +45425,14 @@ definitions:
         type: array
         items:
           type: string
-  stafihub.stafihub.bridge.ProposalContent:
+  mezonhub.mezonhub.bridge.ProposalContent:
     type: object
     properties:
       amount:
         type: string
       receiver:
         type: string
-  stafihub.stafihub.bridge.QueryBannedDenomListResponse:
+  mezonhub.mezonhub.bridge.QueryBannedDenomListResponse:
     type: object
     properties:
       list:
@@ -45445,7 +45445,7 @@ definitions:
               format: int64
             denom:
               type: string
-  stafihub.stafihub.bridge.QueryChaindIdsResponse:
+  mezonhub.mezonhub.bridge.QueryChaindIdsResponse:
     type: object
     properties:
       chainId:
@@ -45453,20 +45453,20 @@ definitions:
         items:
           type: integer
           format: int64
-  stafihub.stafihub.bridge.QueryGetDepositCountResponse:
+  mezonhub.mezonhub.bridge.QueryGetDepositCountResponse:
     type: object
     properties:
       count:
         type: integer
         format: int64
-  stafihub.stafihub.bridge.QueryParamsResponse:
+  mezonhub.mezonhub.bridge.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.bridge.QueryProposalDetailResponse:
+  mezonhub.mezonhub.bridge.QueryProposalDetailResponse:
     type: object
     properties:
       proposal:
@@ -45485,12 +45485,12 @@ definitions:
             type: array
             items:
               type: string
-  stafihub.stafihub.bridge.QueryRelayFeeReceiverResponse:
+  mezonhub.mezonhub.bridge.QueryRelayFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  stafihub.stafihub.bridge.QueryRelayFeeResponse:
+  mezonhub.mezonhub.bridge.QueryRelayFeeResponse:
     type: object
     properties:
       value:
@@ -45505,7 +45505,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  stafihub.stafihub.bridge.QueryResourceidToDenomsResponse:
+  mezonhub.mezonhub.bridge.QueryResourceidToDenomsResponse:
     type: object
     properties:
       resourceidToDenoms:
@@ -45524,7 +45524,7 @@ definitions:
                 - NATIVE
                 - EXTERNAL
               default: UNSPECIFIED
-  stafihub.stafihub.bridge.ResourceIdToDenom:
+  mezonhub.mezonhub.bridge.ResourceIdToDenom:
     type: object
     properties:
       resourceId:
@@ -45538,37 +45538,37 @@ definitions:
           - NATIVE
           - EXTERNAL
         default: UNSPECIFIED
-  stafihub.stafihub.claim.MsgClaimResponse:
+  mezonhub.mezonhub.claim.MsgClaimResponse:
     type: object
-  stafihub.stafihub.claim.MsgProvideTokenResponse:
+  mezonhub.mezonhub.claim.MsgProvideTokenResponse:
     type: object
-  stafihub.stafihub.claim.MsgSetMerkleRootResponse:
+  mezonhub.mezonhub.claim.MsgSetMerkleRootResponse:
     type: object
-  stafihub.stafihub.claim.MsgToggleClaimSwitchResponse:
+  mezonhub.mezonhub.claim.MsgToggleClaimSwitchResponse:
     type: object
-  stafihub.stafihub.claim.MsgWithdrawTokenResponse:
+  mezonhub.mezonhub.claim.MsgWithdrawTokenResponse:
     type: object
-  stafihub.stafihub.claim.Params:
+  mezonhub.mezonhub.claim.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.claim.QueryClaimSwitchResponse:
+  mezonhub.mezonhub.claim.QueryClaimSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  stafihub.stafihub.claim.QueryIsClaimedResponse:
+  mezonhub.mezonhub.claim.QueryIsClaimedResponse:
     type: object
     properties:
       isClaimed:
         type: boolean
-  stafihub.stafihub.claim.QueryParamsResponse:
+  mezonhub.mezonhub.claim.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.ledger.BondPipeline:
+  mezonhub.mezonhub.ledger.BondPipeline:
     type: object
     properties:
       denom:
@@ -45584,7 +45584,7 @@ definitions:
             type: string
           active:
             type: string
-  stafihub.stafihub.ledger.BondRecord:
+  mezonhub.mezonhub.ledger.BondRecord:
     type: object
     properties:
       denom:
@@ -45607,7 +45607,7 @@ definitions:
           - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
           - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
         default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  stafihub.stafihub.ledger.BondSnapshot:
+  mezonhub.mezonhub.ledger.BondSnapshot:
     type: object
     properties:
       denom:
@@ -45635,7 +45635,7 @@ definitions:
           - TRANSFER_SKIPPED
           - TRANSFER_REPORTED
         default: ERA_UPDATED
-  stafihub.stafihub.ledger.EraExchangeRate:
+  mezonhub.mezonhub.ledger.EraExchangeRate:
     type: object
     properties:
       denom:
@@ -45645,14 +45645,14 @@ definitions:
         format: int64
       value:
         type: string
-  stafihub.stafihub.ledger.ExchangeRate:
+  mezonhub.mezonhub.ledger.ExchangeRate:
     type: object
     properties:
       denom:
         type: string
       value:
         type: string
-  stafihub.stafihub.ledger.IcaAccount:
+  mezonhub.mezonhub.ledger.IcaAccount:
     type: object
     properties:
       owner:
@@ -45671,7 +45671,7 @@ definitions:
         type: string
       hostChannelId:
         type: string
-  stafihub.stafihub.ledger.IcaPoolDetail:
+  mezonhub.mezonhub.ledger.IcaPoolDetail:
     type: object
     properties:
       denom:
@@ -45726,7 +45726,7 @@ definitions:
             type: string
           hostChannelId:
             type: string
-  stafihub.stafihub.ledger.IcaPoolStatus:
+  mezonhub.mezonhub.ledger.IcaPoolStatus:
     type: string
     enum:
       - ICA_POOL_STATUS_UNSPECIFIED
@@ -45735,7 +45735,7 @@ definitions:
       - ICA_POOL_STATUS_CREATE_TWO
       - ICA_POOL_STATUS_SET_WITHDRAWAL
     default: ICA_POOL_STATUS_UNSPECIFIED
-  stafihub.stafihub.ledger.InterchainTxStatus:
+  mezonhub.mezonhub.ledger.InterchainTxStatus:
     type: string
     enum:
       - INTERCHAIN_TX_STATUS_UNSPECIFIED
@@ -45743,7 +45743,7 @@ definitions:
       - INTERCHAIN_TX_STATUS_SUCCESS
       - INTERCHAIN_TX_STATUS_FAILED
     default: INTERCHAIN_TX_STATUS_UNSPECIFIED
-  stafihub.stafihub.ledger.LinkChunk:
+  mezonhub.mezonhub.ledger.LinkChunk:
     type: object
     properties:
       bond:
@@ -45752,7 +45752,7 @@ definitions:
         type: string
       active:
         type: string
-  stafihub.stafihub.ledger.LiquidityBondState:
+  mezonhub.mezonhub.ledger.LiquidityBondState:
     type: string
     enum:
       - LIQUIDITY_BOND_STATE_VERIFY_OK
@@ -45762,53 +45762,53 @@ definitions:
       - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
       - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
     default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  stafihub.stafihub.ledger.MsgClearCurrentEraSnapShotsResponse:
+  mezonhub.mezonhub.ledger.MsgClearCurrentEraSnapShotsResponse:
     type: object
-  stafihub.stafihub.ledger.MsgInitPoolResponse:
+  mezonhub.mezonhub.ledger.MsgInitPoolResponse:
     type: object
-  stafihub.stafihub.ledger.MsgLiquidityUnbondResponse:
+  mezonhub.mezonhub.ledger.MsgLiquidityUnbondResponse:
     type: object
-  stafihub.stafihub.ledger.MsgMigrateInitResponse:
+  mezonhub.mezonhub.ledger.MsgMigrateInitResponse:
     type: object
-  stafihub.stafihub.ledger.MsgMigrateUnbondingsResponse:
+  mezonhub.mezonhub.ledger.MsgMigrateUnbondingsResponse:
     type: object
-  stafihub.stafihub.ledger.MsgRegisterIcaPoolResponse:
+  mezonhub.mezonhub.ledger.MsgRegisterIcaPoolResponse:
     type: object
-  stafihub.stafihub.ledger.MsgRmBondedPoolResponse:
+  mezonhub.mezonhub.ledger.MsgRmBondedPoolResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetEraSecondsResponse:
+  mezonhub.mezonhub.ledger.MsgSetEraSecondsResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetEraUnbondLimitResponse:
+  mezonhub.mezonhub.ledger.MsgSetEraUnbondLimitResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetLeastBondResponse:
+  mezonhub.mezonhub.ledger.MsgSetLeastBondResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetPoolDetailResponse:
+  mezonhub.mezonhub.ledger.MsgSetPoolDetailResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetPoolStatusResponse:
+  mezonhub.mezonhub.ledger.MsgSetPoolStatusResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetProtocolFeeReceiverResponse:
+  mezonhub.mezonhub.ledger.MsgSetProtocolFeeReceiverResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetRParamsResponse:
+  mezonhub.mezonhub.ledger.MsgSetRParamsResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetRelayFeeReceiverResponse:
+  mezonhub.mezonhub.ledger.MsgSetRelayFeeReceiverResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetRelayGasPriceResponse:
+  mezonhub.mezonhub.ledger.MsgSetRelayGasPriceResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetStakingRewardCommissionResponse:
+  mezonhub.mezonhub.ledger.MsgSetStakingRewardCommissionResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetUnbondCommissionResponse:
+  mezonhub.mezonhub.ledger.MsgSetUnbondCommissionResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetUnbondRelayFeeResponse:
+  mezonhub.mezonhub.ledger.MsgSetUnbondRelayFeeResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetWithdrawalAddrResponse:
+  mezonhub.mezonhub.ledger.MsgSetWithdrawalAddrResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSubmitSignatureResponse:
+  mezonhub.mezonhub.ledger.MsgSubmitSignatureResponse:
     type: object
-  stafihub.stafihub.ledger.MsgToggleUnbondSwitchResponse:
+  mezonhub.mezonhub.ledger.MsgToggleUnbondSwitchResponse:
     type: object
-  stafihub.stafihub.ledger.MsgUnsealMigrateInitResponse:
+  mezonhub.mezonhub.ledger.MsgUnsealMigrateInitResponse:
     type: object
-  stafihub.stafihub.ledger.OriginalTxType:
+  mezonhub.mezonhub.ledger.OriginalTxType:
     type: string
     enum:
       - ORIGINAL_TX_TYPE_DEAL_ERAUPDATED
@@ -45818,7 +45818,7 @@ definitions:
       - ORIGINAL_TX_TYPE_RESERVED
     default: ORIGINAL_TX_TYPE_DEAL_ERAUPDATED
     description: OriginalTxType enumerates the tx type of a signature.
-  stafihub.stafihub.ledger.PoolBondState:
+  mezonhub.mezonhub.ledger.PoolBondState:
     type: string
     enum:
       - ERA_UPDATED
@@ -45827,7 +45827,7 @@ definitions:
       - TRANSFER_SKIPPED
       - TRANSFER_REPORTED
     default: ERA_UPDATED
-  stafihub.stafihub.ledger.PoolDetail:
+  mezonhub.mezonhub.ledger.PoolDetail:
     type: object
     properties:
       denom:
@@ -45848,21 +45848,21 @@ definitions:
           - NOT_ACTIVE
           - RESERVED
         default: ACTIVE
-  stafihub.stafihub.ledger.PoolStatus:
+  mezonhub.mezonhub.ledger.PoolStatus:
     type: string
     enum:
       - ACTIVE
       - NOT_ACTIVE
       - RESERVED
     default: ACTIVE
-  stafihub.stafihub.ledger.QueryBondedPoolsByDenomResponse:
+  mezonhub.mezonhub.ledger.QueryBondedPoolsByDenomResponse:
     type: object
     properties:
       addrs:
         type: array
         items:
           type: string
-  stafihub.stafihub.ledger.QueryEraExchangeRatesByDenomResponse:
+  mezonhub.mezonhub.ledger.QueryEraExchangeRatesByDenomResponse:
     type: object
     properties:
       eraExchangeRates:
@@ -45877,7 +45877,7 @@ definitions:
               format: int64
             value:
               type: string
-  stafihub.stafihub.ledger.QueryExchangeRateAllResponse:
+  mezonhub.mezonhub.ledger.QueryExchangeRateAllResponse:
     type: object
     properties:
       exchangeRates:
@@ -45889,7 +45889,7 @@ definitions:
               type: string
             value:
               type: string
-  stafihub.stafihub.ledger.QueryGetBondPipelineResponse:
+  mezonhub.mezonhub.ledger.QueryGetBondPipelineResponse:
     type: object
     properties:
       pipeline:
@@ -45908,7 +45908,7 @@ definitions:
                 type: string
               active:
                 type: string
-  stafihub.stafihub.ledger.QueryGetBondRecordResponse:
+  mezonhub.mezonhub.ledger.QueryGetBondRecordResponse:
     type: object
     properties:
       bondRecord:
@@ -45934,20 +45934,20 @@ definitions:
               - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
               - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
             default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  stafihub.stafihub.ledger.QueryGetChainEraResponse:
+  mezonhub.mezonhub.ledger.QueryGetChainEraResponse:
     type: object
     properties:
       era:
         type: integer
         format: int64
-  stafihub.stafihub.ledger.QueryGetCurrentEraSnapshotResponse:
+  mezonhub.mezonhub.ledger.QueryGetCurrentEraSnapshotResponse:
     type: object
     properties:
       shotIds:
         type: array
         items:
           type: string
-  stafihub.stafihub.ledger.QueryGetEraExchangeRateResponse:
+  mezonhub.mezonhub.ledger.QueryGetEraExchangeRateResponse:
     type: object
     properties:
       eraExchangeRate:
@@ -45960,20 +45960,20 @@ definitions:
             format: int64
           value:
             type: string
-  stafihub.stafihub.ledger.QueryGetEraSnapshotResponse:
+  mezonhub.mezonhub.ledger.QueryGetEraSnapshotResponse:
     type: object
     properties:
       shotIds:
         type: array
         items:
           type: string
-  stafihub.stafihub.ledger.QueryGetEraUnbondLimitResponse:
+  mezonhub.mezonhub.ledger.QueryGetEraUnbondLimitResponse:
     type: object
     properties:
       limit:
         type: integer
         format: int64
-  stafihub.stafihub.ledger.QueryGetExchangeRateResponse:
+  mezonhub.mezonhub.ledger.QueryGetExchangeRateResponse:
     type: object
     properties:
       exchangeRate:
@@ -45983,7 +45983,7 @@ definitions:
             type: string
           value:
             type: string
-  stafihub.stafihub.ledger.QueryGetPoolDetailResponse:
+  mezonhub.mezonhub.ledger.QueryGetPoolDetailResponse:
     type: object
     properties:
       detail:
@@ -46007,12 +46007,12 @@ definitions:
               - NOT_ACTIVE
               - RESERVED
             default: ACTIVE
-  stafihub.stafihub.ledger.QueryGetProtocolFeeReceiverResponse:
+  mezonhub.mezonhub.ledger.QueryGetProtocolFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  stafihub.stafihub.ledger.QueryGetRParamsResponse:
+  mezonhub.mezonhub.ledger.QueryGetRParamsResponse:
     type: object
     properties:
       rParams:
@@ -46033,7 +46033,7 @@ definitions:
             format: int64
           leastBond:
             type: string
-  stafihub.stafihub.ledger.QueryGetSignatureResponse:
+  mezonhub.mezonhub.ledger.QueryGetSignatureResponse:
     type: object
     properties:
       signature:
@@ -46062,7 +46062,7 @@ definitions:
             type: array
             items:
               type: string
-  stafihub.stafihub.ledger.QueryGetSnapshotResponse:
+  mezonhub.mezonhub.ledger.QueryGetSnapshotResponse:
     type: object
     properties:
       shot:
@@ -46093,22 +46093,22 @@ definitions:
               - TRANSFER_SKIPPED
               - TRANSFER_REPORTED
             default: ERA_UPDATED
-  stafihub.stafihub.ledger.QueryGetStakingRewardCommissionResponse:
+  mezonhub.mezonhub.ledger.QueryGetStakingRewardCommissionResponse:
     type: object
     properties:
       commission:
         type: string
-  stafihub.stafihub.ledger.QueryGetTotalExpectedActiveResponse:
+  mezonhub.mezonhub.ledger.QueryGetTotalExpectedActiveResponse:
     type: object
     properties:
       active:
         type: string
-  stafihub.stafihub.ledger.QueryGetUnbondCommissionResponse:
+  mezonhub.mezonhub.ledger.QueryGetUnbondCommissionResponse:
     type: object
     properties:
       commission:
         type: string
-  stafihub.stafihub.ledger.QueryGetUnbondRelayFeeResponse:
+  mezonhub.mezonhub.ledger.QueryGetUnbondRelayFeeResponse:
     type: object
     properties:
       fee:
@@ -46131,7 +46131,7 @@ definitions:
               method
 
               signatures required by gogoproto.
-  stafihub.stafihub.ledger.QueryIcaPoolListResponse:
+  mezonhub.mezonhub.ledger.QueryIcaPoolListResponse:
     type: object
     properties:
       icaPoolList:
@@ -46191,7 +46191,7 @@ definitions:
                   type: string
                 hostChannelId:
                   type: string
-  stafihub.stafihub.ledger.QueryInterchainTxStatusResponse:
+  mezonhub.mezonhub.ledger.QueryInterchainTxStatusResponse:
     type: object
     properties:
       interchainTxStatus:
@@ -46202,13 +46202,13 @@ definitions:
           - INTERCHAIN_TX_STATUS_SUCCESS
           - INTERCHAIN_TX_STATUS_FAILED
         default: INTERCHAIN_TX_STATUS_UNSPECIFIED
-  stafihub.stafihub.ledger.QueryPoolUnbondNextSequenceResponse:
+  mezonhub.mezonhub.ledger.QueryPoolUnbondNextSequenceResponse:
     type: object
     properties:
       nextSequence:
         type: integer
         format: int64
-  stafihub.stafihub.ledger.QueryPoolUnbondingsResponse:
+  mezonhub.mezonhub.ledger.QueryPoolUnbondingsResponse:
     type: object
     properties:
       unbondings:
@@ -46222,12 +46222,12 @@ definitions:
               type: string
             recipient:
               type: string
-  stafihub.stafihub.ledger.QueryRelayFeeReceiverResponse:
+  mezonhub.mezonhub.ledger.QueryRelayFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  stafihub.stafihub.ledger.QueryTotalProtocolFeeResponse:
+  mezonhub.mezonhub.ledger.QueryTotalProtocolFeeResponse:
     type: object
     properties:
       totalProtocolFeeList:
@@ -46239,12 +46239,12 @@ definitions:
               type: string
             value:
               type: string
-  stafihub.stafihub.ledger.QueryUnbondSwitchResponse:
+  mezonhub.mezonhub.ledger.QueryUnbondSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  stafihub.stafihub.ledger.RParams:
+  mezonhub.mezonhub.ledger.RParams:
     type: object
     properties:
       denom:
@@ -46262,7 +46262,7 @@ definitions:
         format: int64
       leastBond:
         type: string
-  stafihub.stafihub.ledger.Signature:
+  mezonhub.mezonhub.ledger.Signature:
     type: object
     properties:
       denom:
@@ -46288,14 +46288,14 @@ definitions:
         type: array
         items:
           type: string
-  stafihub.stafihub.ledger.TotalProtocolFee:
+  mezonhub.mezonhub.ledger.TotalProtocolFee:
     type: object
     properties:
       denom:
         type: string
       value:
         type: string
-  stafihub.stafihub.ledger.UnbondRelayFee:
+  mezonhub.mezonhub.ledger.UnbondRelayFee:
     type: object
     properties:
       denom:
@@ -46312,7 +46312,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  stafihub.stafihub.ledger.Unbonding:
+  mezonhub.mezonhub.ledger.Unbonding:
     type: object
     properties:
       unbonder:
@@ -46321,7 +46321,7 @@ definitions:
         type: string
       recipient:
         type: string
-  stafihub.stafihub.mining.CreateRewardPoolInfo:
+  mezonhub.mezonhub.mining.CreateRewardPoolInfo:
     type: object
     properties:
       rewardTokenDenom:
@@ -46333,7 +46333,7 @@ definitions:
       startTimestamp:
         type: string
         format: uint64
-  stafihub.stafihub.mining.CreateStakeItemInfo:
+  mezonhub.mezonhub.mining.CreateStakeItemInfo:
     type: object
     properties:
       lockSecond:
@@ -46342,85 +46342,85 @@ definitions:
       powerRewardRate:
         type: string
         title: user stakedPower = powerRewardRate * stakedAmount
-  stafihub.stafihub.mining.MsgAddMiningProviderResponse:
+  mezonhub.mezonhub.mining.MsgAddMiningProviderResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddRewardPoolResponse:
+  mezonhub.mezonhub.mining.MsgAddRewardPoolResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddRewardResponse:
+  mezonhub.mezonhub.mining.MsgAddRewardResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddRewardTokenResponse:
+  mezonhub.mezonhub.mining.MsgAddRewardTokenResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddStakeItemResponse:
+  mezonhub.mezonhub.mining.MsgAddStakeItemResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddStakePoolResponse:
+  mezonhub.mezonhub.mining.MsgAddStakePoolResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddStakeTokenResponse:
+  mezonhub.mezonhub.mining.MsgAddStakeTokenResponse:
     type: object
-  stafihub.stafihub.mining.MsgClaimRewardResponse:
+  mezonhub.mezonhub.mining.MsgClaimRewardResponse:
     type: object
-  stafihub.stafihub.mining.MsgEmergencyWithdrawResponse:
+  mezonhub.mezonhub.mining.MsgEmergencyWithdrawResponse:
     type: object
-  stafihub.stafihub.mining.MsgRmMiningProviderResponse:
+  mezonhub.mezonhub.mining.MsgRmMiningProviderResponse:
     type: object
-  stafihub.stafihub.mining.MsgRmRewardTokenResponse:
+  mezonhub.mezonhub.mining.MsgRmRewardTokenResponse:
     type: object
-  stafihub.stafihub.mining.MsgRmStakeTokenResponse:
+  mezonhub.mezonhub.mining.MsgRmStakeTokenResponse:
     type: object
-  stafihub.stafihub.mining.MsgSetMaxRewardPoolNumberResponse:
+  mezonhub.mezonhub.mining.MsgSetMaxRewardPoolNumberResponse:
     type: object
-  stafihub.stafihub.mining.MsgSetMaxStakeItemNumberResponse:
+  mezonhub.mezonhub.mining.MsgSetMaxStakeItemNumberResponse:
     type: object
-  stafihub.stafihub.mining.MsgSetStakeItemLimitResponse:
+  mezonhub.mezonhub.mining.MsgSetStakeItemLimitResponse:
     type: object
-  stafihub.stafihub.mining.MsgStakeResponse:
+  mezonhub.mezonhub.mining.MsgStakeResponse:
     type: object
-  stafihub.stafihub.mining.MsgToggleEmergencySwitchResponse:
+  mezonhub.mezonhub.mining.MsgToggleEmergencySwitchResponse:
     type: object
-  stafihub.stafihub.mining.MsgToggleProviderSwitchResponse:
+  mezonhub.mezonhub.mining.MsgToggleProviderSwitchResponse:
     type: object
-  stafihub.stafihub.mining.MsgUpdateRewardPoolResponse:
+  mezonhub.mezonhub.mining.MsgUpdateRewardPoolResponse:
     type: object
-  stafihub.stafihub.mining.MsgUpdateStakeItemResponse:
+  mezonhub.mezonhub.mining.MsgUpdateStakeItemResponse:
     type: object
-  stafihub.stafihub.mining.MsgWithdrawResponse:
+  mezonhub.mezonhub.mining.MsgWithdrawResponse:
     type: object
-  stafihub.stafihub.mining.MsgWithdrawRewardTokenResponse:
+  mezonhub.mezonhub.mining.MsgWithdrawRewardTokenResponse:
     type: object
-  stafihub.stafihub.mining.Params:
+  mezonhub.mezonhub.mining.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse:
+  mezonhub.mezonhub.mining.QueryMaxRewardPoolNumberResponse:
     type: object
     properties:
       number:
         type: integer
         format: int64
-  stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse:
+  mezonhub.mezonhub.mining.QueryMaxStakeItemNumberResponse:
     type: object
     properties:
       number:
         type: integer
         format: int64
-  stafihub.stafihub.mining.QueryMiningProviderListResponse:
+  mezonhub.mezonhub.mining.QueryMiningProviderListResponse:
     type: object
     properties:
       miningProviderList:
         type: array
         items:
           type: string
-  stafihub.stafihub.mining.QueryParamsResponse:
+  mezonhub.mezonhub.mining.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.mining.QueryProviderSwitchResponse:
+  mezonhub.mezonhub.mining.QueryProviderSwitchResponse:
     type: object
     properties:
       providerSwitch:
         type: boolean
-  stafihub.stafihub.mining.QueryRewardTokenListResponse:
+  mezonhub.mezonhub.mining.QueryRewardTokenListResponse:
     type: object
     properties:
       rewardTokenList:
@@ -46434,7 +46434,7 @@ definitions:
               type: string
             minRewardPerSecond:
               type: string
-  stafihub.stafihub.mining.QueryStakeItemListResponse:
+  mezonhub.mezonhub.mining.QueryStakeItemListResponse:
     type: object
     properties:
       stakeItemList:
@@ -46456,7 +46456,7 @@ definitions:
               title: user stakedPower = powerRewardRate * stakedAmount
             enable:
               type: boolean
-  stafihub.stafihub.mining.QueryStakePoolInfoResponse:
+  mezonhub.mezonhub.mining.QueryStakePoolInfoResponse:
     type: object
     properties:
       stakePool:
@@ -46505,7 +46505,7 @@ definitions:
             type: boolean
           creator:
             type: string
-  stafihub.stafihub.mining.QueryStakePoolListResponse:
+  mezonhub.mezonhub.mining.QueryStakePoolListResponse:
     type: object
     properties:
       stakePoolList:
@@ -46556,13 +46556,13 @@ definitions:
               type: boolean
             creator:
               type: string
-  stafihub.stafihub.mining.QueryStakeRecordCountResponse:
+  mezonhub.mezonhub.mining.QueryStakeRecordCountResponse:
     type: object
     properties:
       count:
         type: integer
         format: int64
-  stafihub.stafihub.mining.QueryStakeRecordListResponse:
+  mezonhub.mezonhub.mining.QueryStakeRecordListResponse:
     type: object
     properties:
       stakeRecordList:
@@ -46607,7 +46607,7 @@ definitions:
             stakeItemIndex:
               type: integer
               format: int64
-  stafihub.stafihub.mining.QueryStakeRecordResponse:
+  mezonhub.mezonhub.mining.QueryStakeRecordResponse:
     type: object
     properties:
       stakeRecord:
@@ -46650,7 +46650,7 @@ definitions:
           stakeItemIndex:
             type: integer
             format: int64
-  stafihub.stafihub.mining.QueryStakeRewardResponse:
+  mezonhub.mezonhub.mining.QueryStakeRewardResponse:
     type: object
     properties:
       rewardTokens:
@@ -46667,7 +46667,7 @@ definitions:
 
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
-  stafihub.stafihub.mining.RewardPool:
+  mezonhub.mezonhub.mining.RewardPool:
     type: object
     properties:
       index:
@@ -46693,7 +46693,7 @@ definitions:
         type: string
       totalClaimedAmount:
         type: string
-  stafihub.stafihub.mining.RewardToken:
+  mezonhub.mezonhub.mining.RewardToken:
     type: object
     properties:
       rewardTokenDenom:
@@ -46702,7 +46702,7 @@ definitions:
         type: string
       minRewardPerSecond:
         type: string
-  stafihub.stafihub.mining.StakeItem:
+  mezonhub.mezonhub.mining.StakeItem:
     type: object
     properties:
       index:
@@ -46719,7 +46719,7 @@ definitions:
         title: user stakedPower = powerRewardRate * stakedAmount
       enable:
         type: boolean
-  stafihub.stafihub.mining.StakePool:
+  mezonhub.mezonhub.mining.StakePool:
     type: object
     properties:
       index:
@@ -46765,7 +46765,7 @@ definitions:
         type: boolean
       creator:
         type: string
-  stafihub.stafihub.mining.UserRewardInfo:
+  mezonhub.mezonhub.mining.UserRewardInfo:
     type: object
     properties:
       rewardPoolIndex:
@@ -46777,7 +46777,7 @@ definitions:
         type: string
       claimedAmount:
         type: string
-  stafihub.stafihub.mining.UserStakeRecord:
+  mezonhub.mezonhub.mining.UserStakeRecord:
     type: object
     properties:
       userAddress:
@@ -46911,73 +46911,73 @@ definitions:
     description: |-
       Metadata represents a struct that describes
       a basic token.
-  stafihub.stafihub.rbank.MsgAddDenomResponse:
+  mezonhub.mezonhub.rbank.MsgAddDenomResponse:
     type: object
-  stafihub.stafihub.rbank.Params:
+  mezonhub.mezonhub.rbank.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rbank.QueryAddressPrefixResponse:
+  mezonhub.mezonhub.rbank.QueryAddressPrefixResponse:
     type: object
     properties:
       accAddressPrefix:
         type: string
       valAddressPrefix:
         type: string
-  stafihub.stafihub.rbank.QueryParamsResponse:
+  mezonhub.mezonhub.rbank.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rdex.MsgAddLiquidityResponse:
+  mezonhub.mezonhub.rdex.MsgAddLiquidityResponse:
     type: object
-  stafihub.stafihub.rdex.MsgAddPoolCreatorResponse:
+  mezonhub.mezonhub.rdex.MsgAddPoolCreatorResponse:
     type: object
-  stafihub.stafihub.rdex.MsgAddProviderResponse:
+  mezonhub.mezonhub.rdex.MsgAddProviderResponse:
     type: object
-  stafihub.stafihub.rdex.MsgCreatePoolResponse:
+  mezonhub.mezonhub.rdex.MsgCreatePoolResponse:
     type: object
-  stafihub.stafihub.rdex.MsgRemoveLiquidityResponse:
+  mezonhub.mezonhub.rdex.MsgRemoveLiquidityResponse:
     type: object
-  stafihub.stafihub.rdex.MsgRmPoolCreatorResponse:
+  mezonhub.mezonhub.rdex.MsgRmPoolCreatorResponse:
     type: object
-  stafihub.stafihub.rdex.MsgRmProviderResponse:
+  mezonhub.mezonhub.rdex.MsgRmProviderResponse:
     type: object
-  stafihub.stafihub.rdex.MsgSwapResponse:
+  mezonhub.mezonhub.rdex.MsgSwapResponse:
     type: object
-  stafihub.stafihub.rdex.MsgToggleProviderSwitchResponse:
+  mezonhub.mezonhub.rdex.MsgToggleProviderSwitchResponse:
     type: object
-  stafihub.stafihub.rdex.Params:
+  mezonhub.mezonhub.rdex.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rdex.QueryParamsResponse:
+  mezonhub.mezonhub.rdex.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rdex.QueryPoolCreatorListResponse:
+  mezonhub.mezonhub.rdex.QueryPoolCreatorListResponse:
     type: object
     properties:
       poolCreatorList:
         type: array
         items:
           type: string
-  stafihub.stafihub.rdex.QueryProviderListResponse:
+  mezonhub.mezonhub.rdex.QueryProviderListResponse:
     type: object
     properties:
       providerList:
         type: array
         items:
           type: string
-  stafihub.stafihub.rdex.QueryProviderSwitchResponse:
+  mezonhub.mezonhub.rdex.QueryProviderSwitchResponse:
     type: object
     properties:
       providerSwitch:
         type: boolean
-  stafihub.stafihub.rdex.QuerySwapPoolInfoResponse:
+  mezonhub.mezonhub.rdex.QuerySwapPoolInfoResponse:
     type: object
     properties:
       swapPool:
@@ -47031,7 +47031,7 @@ definitions:
               method
 
               signatures required by gogoproto.
-  stafihub.stafihub.rdex.QuerySwapPoolListResponse:
+  mezonhub.mezonhub.rdex.QuerySwapPoolListResponse:
     type: object
     properties:
       swapPoolList:
@@ -47087,7 +47087,7 @@ definitions:
                 method
 
                 signatures required by gogoproto.
-  stafihub.stafihub.rdex.SwapPool:
+  mezonhub.mezonhub.rdex.SwapPool:
     type: object
     properties:
       index:
@@ -47129,26 +47129,26 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  stafihub.stafihub.relayers.MsgAddRelayerResponse:
+  mezonhub.mezonhub.relayers.MsgAddRelayerResponse:
     type: object
-  stafihub.stafihub.relayers.MsgDeleteRelayerResponse:
+  mezonhub.mezonhub.relayers.MsgDeleteRelayerResponse:
     type: object
-  stafihub.stafihub.relayers.MsgSetThresholdResponse:
+  mezonhub.mezonhub.relayers.MsgSetThresholdResponse:
     type: object
-  stafihub.stafihub.relayers.QueryRelayersResponse:
+  mezonhub.mezonhub.relayers.QueryRelayersResponse:
     type: object
     properties:
       relayers:
         type: array
         items:
           type: string
-  stafihub.stafihub.relayers.QueryThresholdResponse:
+  mezonhub.mezonhub.relayers.QueryThresholdResponse:
     type: object
     properties:
       threshold:
         type: integer
         format: int64
-  stafihub.stafihub.rmintreward.Acts:
+  mezonhub.mezonhub.rmintreward.Acts:
     type: object
     properties:
       acts:
@@ -47156,7 +47156,7 @@ definitions:
         items:
           type: string
           format: uint64
-  stafihub.stafihub.rmintreward.MintRewardAct:
+  mezonhub.mezonhub.rmintreward.MintRewardAct:
     type: object
     properties:
       begin:
@@ -47187,7 +47187,7 @@ definitions:
               type: string
             userLimit:
               type: string
-  stafihub.stafihub.rmintreward.MintRewardActPost:
+  mezonhub.mezonhub.rmintreward.MintRewardActPost:
     type: object
     properties:
       begin:
@@ -47212,24 +47212,24 @@ definitions:
               type: string
             userLimit:
               type: string
-  stafihub.stafihub.rmintreward.MsgAddMintRewardActResponse:
+  mezonhub.mezonhub.rmintreward.MsgAddMintRewardActResponse:
     type: object
-  stafihub.stafihub.rmintreward.MsgClaimMintRewardResponse:
+  mezonhub.mezonhub.rmintreward.MsgClaimMintRewardResponse:
     type: object
-  stafihub.stafihub.rmintreward.MsgProvideRewardTokenResponse:
+  mezonhub.mezonhub.rmintreward.MsgProvideRewardTokenResponse:
     type: object
-  stafihub.stafihub.rmintreward.MsgUpdateMintRewardActResponse:
+  mezonhub.mezonhub.rmintreward.MsgUpdateMintRewardActResponse:
     type: object
-  stafihub.stafihub.rmintreward.Params:
+  mezonhub.mezonhub.rmintreward.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rmintreward.QueryActCurrentCycleResponse:
+  mezonhub.mezonhub.rmintreward.QueryActCurrentCycleResponse:
     type: object
     properties:
       currentCycle:
         type: string
         format: uint64
-  stafihub.stafihub.rmintreward.QueryActDetailResponse:
+  mezonhub.mezonhub.rmintreward.QueryActDetailResponse:
     type: object
     properties:
       act:
@@ -47263,13 +47263,13 @@ definitions:
                   type: string
                 userLimit:
                   type: string
-  stafihub.stafihub.rmintreward.QueryActLatestCycleResponse:
+  mezonhub.mezonhub.rmintreward.QueryActLatestCycleResponse:
     type: object
     properties:
       latestCycle:
         type: string
         format: uint64
-  stafihub.stafihub.rmintreward.QueryClaimInfoDetailResponse:
+  mezonhub.mezonhub.rmintreward.QueryClaimInfoDetailResponse:
     type: object
     properties:
       claimInfo:
@@ -47296,14 +47296,14 @@ definitions:
                   type: string
                 totalClaimedAmount:
                   type: string
-  stafihub.stafihub.rmintreward.QueryParamsResponse:
+  mezonhub.mezonhub.rmintreward.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rmintreward.QueryUserActsResponse:
+  mezonhub.mezonhub.rmintreward.QueryUserActsResponse:
     type: object
     properties:
       acts:
@@ -47314,13 +47314,13 @@ definitions:
             items:
               type: string
               format: uint64
-  stafihub.stafihub.rmintreward.QueryUserMintCountResponse:
+  mezonhub.mezonhub.rmintreward.QueryUserMintCountResponse:
     type: object
     properties:
       count:
         type: string
         format: uint64
-  stafihub.stafihub.rmintreward.TokenClaimInfo:
+  mezonhub.mezonhub.rmintreward.TokenClaimInfo:
     type: object
     properties:
       denom:
@@ -47329,7 +47329,7 @@ definitions:
         type: string
       totalClaimedAmount:
         type: string
-  stafihub.stafihub.rmintreward.TokenRewardInfo:
+  mezonhub.mezonhub.rmintreward.TokenRewardInfo:
     type: object
     properties:
       denom:
@@ -47342,7 +47342,7 @@ definitions:
         type: string
       userLimit:
         type: string
-  stafihub.stafihub.rmintreward.TokenRewardInfoPost:
+  mezonhub.mezonhub.rmintreward.TokenRewardInfoPost:
     type: object
     properties:
       denom:
@@ -47353,7 +47353,7 @@ definitions:
         type: string
       userLimit:
         type: string
-  stafihub.stafihub.rmintreward.UserClaimInfo:
+  mezonhub.mezonhub.rmintreward.UserClaimInfo:
     type: object
     properties:
       mintRTokenAmount:
@@ -47377,62 +47377,62 @@ definitions:
               type: string
             totalClaimedAmount:
               type: string
-  stafihub.stafihub.rstaking.MsgAddDelegatorToWhitelistResponse:
+  mezonhub.mezonhub.rstaking.MsgAddDelegatorToWhitelistResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgAddValToWhitelistResponse:
+  mezonhub.mezonhub.rstaking.MsgAddValToWhitelistResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgProvideTokenResponse:
+  mezonhub.mezonhub.rstaking.MsgProvideTokenResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgRmDelegatorFromWhitelistResponse:
+  mezonhub.mezonhub.rstaking.MsgRmDelegatorFromWhitelistResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgSetInflationBaseResponse:
+  mezonhub.mezonhub.rstaking.MsgSetInflationBaseResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgToggleDelegatorWhitelistSwitchResponse:
+  mezonhub.mezonhub.rstaking.MsgToggleDelegatorWhitelistSwitchResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgToggleValidatorWhitelistSwitchResponse:
+  mezonhub.mezonhub.rstaking.MsgToggleValidatorWhitelistSwitchResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgWithdrawResponse:
+  mezonhub.mezonhub.rstaking.MsgWithdrawResponse:
     type: object
-  stafihub.stafihub.rstaking.Params:
+  mezonhub.mezonhub.rstaking.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rstaking.QueryDelegatorWhitelistResponse:
+  mezonhub.mezonhub.rstaking.QueryDelegatorWhitelistResponse:
     type: object
     properties:
       delegatorAddress:
         type: array
         items:
           type: string
-  stafihub.stafihub.rstaking.QueryDelegatorWhitelistSwitchResponse:
+  mezonhub.mezonhub.rstaking.QueryDelegatorWhitelistSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  stafihub.stafihub.rstaking.QueryInflationBaseResponse:
+  mezonhub.mezonhub.rstaking.QueryInflationBaseResponse:
     type: object
     properties:
       inflationBase:
         type: string
-  stafihub.stafihub.rstaking.QueryParamsResponse:
+  mezonhub.mezonhub.rstaking.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rstaking.QueryValidatorWhitelistResponse:
+  mezonhub.mezonhub.rstaking.QueryValidatorWhitelistResponse:
     type: object
     properties:
       valAddress:
         type: array
         items:
           type: string
-  stafihub.stafihub.rstaking.QueryValidatorWhitelistSwitchResponse:
+  mezonhub.mezonhub.rstaking.QueryValidatorWhitelistSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  stafihub.stafihub.rvalidator.Cycle:
+  mezonhub.mezonhub.rvalidator.Cycle:
     type: object
     properties:
       denom:
@@ -47445,7 +47445,7 @@ definitions:
       number:
         type: string
         format: uint64
-  stafihub.stafihub.rvalidator.CycleSeconds:
+  mezonhub.mezonhub.rvalidator.CycleSeconds:
     type: object
     properties:
       denom:
@@ -47456,20 +47456,20 @@ definitions:
       seconds:
         type: string
         format: uint64
-  stafihub.stafihub.rvalidator.MsgAddRValidatorResponse:
+  mezonhub.mezonhub.rvalidator.MsgAddRValidatorResponse:
     type: object
-  stafihub.stafihub.rvalidator.MsgInitRValidatorResponse:
+  mezonhub.mezonhub.rvalidator.MsgInitRValidatorResponse:
     type: object
-  stafihub.stafihub.rvalidator.MsgRmRValidatorResponse:
+  mezonhub.mezonhub.rvalidator.MsgRmRValidatorResponse:
     type: object
-  stafihub.stafihub.rvalidator.MsgSetCycleSecondsResponse:
+  mezonhub.mezonhub.rvalidator.MsgSetCycleSecondsResponse:
     type: object
-  stafihub.stafihub.rvalidator.MsgSetShuffleSecondsResponse:
+  mezonhub.mezonhub.rvalidator.MsgSetShuffleSecondsResponse:
     type: object
-  stafihub.stafihub.rvalidator.Params:
+  mezonhub.mezonhub.rvalidator.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rvalidator.QueryCycleSecondsResponse:
+  mezonhub.mezonhub.rvalidator.QueryCycleSecondsResponse:
     type: object
     properties:
       cycleSeconds:
@@ -47483,7 +47483,7 @@ definitions:
           seconds:
             type: string
             format: uint64
-  stafihub.stafihub.rvalidator.QueryLatestDealedCycleResponse:
+  mezonhub.mezonhub.rvalidator.QueryLatestDealedCycleResponse:
     type: object
     properties:
       latestDealedCycle:
@@ -47499,7 +47499,7 @@ definitions:
           number:
             type: string
             format: uint64
-  stafihub.stafihub.rvalidator.QueryLatestVotedCycleResponse:
+  mezonhub.mezonhub.rvalidator.QueryLatestVotedCycleResponse:
     type: object
     properties:
       latestVotedCycle:
@@ -47515,21 +47515,21 @@ definitions:
           number:
             type: string
             format: uint64
-  stafihub.stafihub.rvalidator.QueryParamsResponse:
+  mezonhub.mezonhub.rvalidator.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rvalidator.QueryRValidatorListResponse:
+  mezonhub.mezonhub.rvalidator.QueryRValidatorListResponse:
     type: object
     properties:
       rValidatorList:
         type: array
         items:
           type: string
-  stafihub.stafihub.rvalidator.QueryShuffleSecondsResponse:
+  mezonhub.mezonhub.rvalidator.QueryShuffleSecondsResponse:
     type: object
     properties:
       shuffleSeconds:
@@ -47543,7 +47543,7 @@ definitions:
           seconds:
             type: string
             format: uint64
-  stafihub.stafihub.rvalidator.ShuffleSeconds:
+  mezonhub.mezonhub.rvalidator.ShuffleSeconds:
     type: object
     properties:
       denom:
@@ -47554,9 +47554,9 @@ definitions:
       seconds:
         type: string
         format: uint64
-  stafihub.stafihub.rvote.MsgSetProposalLifeResponse:
+  mezonhub.mezonhub.rvote.MsgSetProposalLifeResponse:
     type: object
-  stafihub.stafihub.rvote.MsgSubmitProposalResponse:
+  mezonhub.mezonhub.rvote.MsgSubmitProposalResponse:
     type: object
     properties:
       propId:
@@ -47569,7 +47569,7 @@ definitions:
           - PROPOSAL_STATUS_EXPIRED
         default: PROPOSAL_STATUS_INITIATED
         description: ProposalStatus enumerates the valid statuses of a proposal.
-  stafihub.stafihub.rvote.ProposalStatus:
+  mezonhub.mezonhub.rvote.ProposalStatus:
     type: string
     enum:
       - PROPOSAL_STATUS_INITIATED
@@ -47577,20 +47577,20 @@ definitions:
       - PROPOSAL_STATUS_EXPIRED
     default: PROPOSAL_STATUS_INITIATED
     description: ProposalStatus enumerates the valid statuses of a proposal.
-  stafihub.stafihub.rvote.QueryGetProposalLifeResponse:
+  mezonhub.mezonhub.rvote.QueryGetProposalLifeResponse:
     type: object
     properties:
       proposalLife:
         type: string
         format: int64
-  stafihub.stafihub.rvote.QueryGetProposalResponse:
+  mezonhub.mezonhub.rvote.QueryGetProposalResponse:
     type: object
     properties:
       proposal:
         type: string
-  stafihub.stafihub.sudo.MsgUpdateAdminResponse:
+  mezonhub.mezonhub.sudo.MsgUpdateAdminResponse:
     type: object
-  stafihub.stafihub.sudo.QueryAdminResponse:
+  mezonhub.mezonhub.sudo.QueryAdminResponse:
     type: object
     properties:
       address:

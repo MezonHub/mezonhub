@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/rstaking/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/mezonhub/mezonhub/x/rstaking/types"
+	sudotypes "github.com/mezonhub/mezonhub/x/sudo/types"
 )
 
 func (k msgServer) ToggleValidatorWhitelistSwitch(goCtx context.Context, msg *types.MsgToggleValidatorWhitelistSwitch) (*types.MsgToggleValidatorWhitelistSwitchResponse, error) {

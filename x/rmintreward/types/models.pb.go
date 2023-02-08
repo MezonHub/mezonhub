@@ -410,13 +410,13 @@ func (m *Acts) GetActs() []uint64 {
 }
 
 func init() {
-	proto.RegisterType((*MintRewardAct)(nil), "stafihub.stafihub.rmintreward.MintRewardAct")
-	proto.RegisterType((*MintRewardActPost)(nil), "stafihub.stafihub.rmintreward.MintRewardActPost")
-	proto.RegisterType((*TokenRewardInfo)(nil), "stafihub.stafihub.rmintreward.TokenRewardInfo")
-	proto.RegisterType((*TokenRewardInfoPost)(nil), "stafihub.stafihub.rmintreward.TokenRewardInfoPost")
-	proto.RegisterType((*UserClaimInfo)(nil), "stafihub.stafihub.rmintreward.UserClaimInfo")
-	proto.RegisterType((*TokenClaimInfo)(nil), "stafihub.stafihub.rmintreward.TokenClaimInfo")
-	proto.RegisterType((*Acts)(nil), "stafihub.stafihub.rmintreward.Acts")
+	proto.RegisterType((*MintRewardAct)(nil), "mezonhub.mezonhub.rmintreward.MintRewardAct")
+	proto.RegisterType((*MintRewardActPost)(nil), "mezonhub.mezonhub.rmintreward.MintRewardActPost")
+	proto.RegisterType((*TokenRewardInfo)(nil), "mezonhub.mezonhub.rmintreward.TokenRewardInfo")
+	proto.RegisterType((*TokenRewardInfoPost)(nil), "mezonhub.mezonhub.rmintreward.TokenRewardInfoPost")
+	proto.RegisterType((*UserClaimInfo)(nil), "mezonhub.mezonhub.rmintreward.UserClaimInfo")
+	proto.RegisterType((*TokenClaimInfo)(nil), "mezonhub.mezonhub.rmintreward.TokenClaimInfo")
+	proto.RegisterType((*Acts)(nil), "mezonhub.mezonhub.rmintreward.Acts")
 }
 
 func init() { proto.RegisterFile("rmintreward/models.proto", fileDescriptor_db7673bad6a6e525) }

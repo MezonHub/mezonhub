@@ -2,8 +2,8 @@ package rvote
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/rvote/keeper"
-	"github.com/stafihub/stafihub/x/rvote/types"
+	"github.com/mezonhub/mezonhub/x/rvote/keeper"
+	"github.com/mezonhub/mezonhub/x/rvote/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

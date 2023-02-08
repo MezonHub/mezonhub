@@ -374,7 +374,7 @@ func (m *BannedDenom) GetDenom() string {
 type ResourceIdToDenom struct {
 	ResourceId string    `protobuf:"bytes,1,opt,name=resourceId,proto3" json:"resourceId,omitempty"`
 	Denom      string    `protobuf:"bytes,2,opt,name=denom,proto3" json:"denom,omitempty"`
-	DenomType  DenomType `protobuf:"varint,3,opt,name=denomType,proto3,enum=stafihub.stafihub.bridge.DenomType" json:"denomType,omitempty"`
+	DenomType  DenomType `protobuf:"varint,3,opt,name=denomType,proto3,enum=mezonhub.mezonhub.bridge.DenomType" json:"denomType,omitempty"`
 }
 
 func (m *ResourceIdToDenom) Reset()         { *m = ResourceIdToDenom{} }
@@ -432,13 +432,13 @@ func (m *ResourceIdToDenom) GetDenomType() DenomType {
 }
 
 func init() {
-	proto.RegisterEnum("stafihub.stafihub.bridge.DenomType", DenomType_name, DenomType_value)
-	proto.RegisterType((*GenesisState)(nil), "stafihub.stafihub.bridge.GenesisState")
-	proto.RegisterType((*DepositCount)(nil), "stafihub.stafihub.bridge.DepositCount")
-	proto.RegisterType((*GenesisProposal)(nil), "stafihub.stafihub.bridge.GenesisProposal")
-	proto.RegisterType((*RelayFee)(nil), "stafihub.stafihub.bridge.RelayFee")
-	proto.RegisterType((*BannedDenom)(nil), "stafihub.stafihub.bridge.BannedDenom")
-	proto.RegisterType((*ResourceIdToDenom)(nil), "stafihub.stafihub.bridge.ResourceIdToDenom")
+	proto.RegisterEnum("mezonhub.mezonhub.bridge.DenomType", DenomType_name, DenomType_value)
+	proto.RegisterType((*GenesisState)(nil), "mezonhub.mezonhub.bridge.GenesisState")
+	proto.RegisterType((*DepositCount)(nil), "mezonhub.mezonhub.bridge.DepositCount")
+	proto.RegisterType((*GenesisProposal)(nil), "mezonhub.mezonhub.bridge.GenesisProposal")
+	proto.RegisterType((*RelayFee)(nil), "mezonhub.mezonhub.bridge.RelayFee")
+	proto.RegisterType((*BannedDenom)(nil), "mezonhub.mezonhub.bridge.BannedDenom")
+	proto.RegisterType((*ResourceIdToDenom)(nil), "mezonhub.mezonhub.bridge.ResourceIdToDenom")
 }
 
 func init() { proto.RegisterFile("bridge/genesis.proto", fileDescriptor_9fdd574b337deec5) }

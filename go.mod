@@ -1,4 +1,4 @@
-module github.com/stafihub/stafihub
+module github.com/mezonhub/mezonhub
 
 go 1.18
 

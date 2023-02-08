@@ -18,9 +18,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/stafihub/stafihub/x/rdex/client/cli"
-	"github.com/stafihub/stafihub/x/rdex/keeper"
-	"github.com/stafihub/stafihub/x/rdex/types"
+	"github.com/mezonhub/mezonhub/x/rdex/client/cli"
+	"github.com/mezonhub/mezonhub/x/rdex/keeper"
+	"github.com/mezonhub/mezonhub/x/rdex/types"
 )
 
 var (

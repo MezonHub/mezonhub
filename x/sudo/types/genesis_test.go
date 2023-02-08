@@ -3,8 +3,8 @@ package types_test
 import (
 	"testing"
 
-	"github.com/stafihub/stafihub/testutil/sample"
-	"github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/mezonhub/mezonhub/testutil/sample"
+	"github.com/mezonhub/mezonhub/x/sudo/types"
 	"github.com/stretchr/testify/require"
 )
 

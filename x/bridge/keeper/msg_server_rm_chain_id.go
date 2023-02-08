@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/bridge/types"
-	sudoTypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/mezonhub/mezonhub/x/bridge/types"
+	sudoTypes "github.com/mezonhub/mezonhub/x/sudo/types"
 )
 
 func (k msgServer) RmChainId(goCtx context.Context, msg *types.MsgRmChainId) (*types.MsgRmChainIdResponse, error) {

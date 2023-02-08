@@ -3,10 +3,10 @@ package rvalidator_test
 import (
 	"testing"
 
-	keepertest "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/testutil/nullify"
-	"github.com/stafihub/stafihub/x/rvalidator"
-	"github.com/stafihub/stafihub/x/rvalidator/types"
+	keepertest "github.com/mezonhub/mezonhub/testutil/keeper"
+	"github.com/mezonhub/mezonhub/testutil/nullify"
+	"github.com/mezonhub/mezonhub/x/rvalidator"
+	"github.com/mezonhub/mezonhub/x/rvalidator/types"
 	"github.com/stretchr/testify/require"
 )
 

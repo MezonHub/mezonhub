@@ -3,10 +3,10 @@ package rmintreward_test
 import (
 	"testing"
 
-	keepertest "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/testutil/nullify"
-	"github.com/stafihub/stafihub/x/rmintreward"
-	"github.com/stafihub/stafihub/x/rmintreward/types"
+	keepertest "github.com/mezonhub/mezonhub/testutil/keeper"
+	"github.com/mezonhub/mezonhub/testutil/nullify"
+	"github.com/mezonhub/mezonhub/x/rmintreward"
+	"github.com/mezonhub/mezonhub/x/rmintreward/types"
 	"github.com/stretchr/testify/require"
 )
 
