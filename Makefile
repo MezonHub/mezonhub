@@ -110,7 +110,7 @@ go.sum:
 draw-deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i ./cmd/iris -d 2 | dot -Tpng -o dependency-graph.png
+	@goviz -i ./cmd/mezon -d 2 | dot -Tpng -o dependency-graph.png
 
 clean:
 	rm -rf build/ tmp-swagger-gen/

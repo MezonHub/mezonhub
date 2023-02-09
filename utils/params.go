@@ -1,5 +1,5 @@
 package utils
 
 const (
-	FisDenom = "ufis"
+	FisDenom = "umez"
 )

@@ -27,28 +27,28 @@ func (am AppModuleBasic) DefaultGenesis(cdc codec.JSONCodec) json.RawMessage {
 	//     "description": "The native staking token of the MeZon Hub",
 	//     "denom_units": [
 	//         {
-	//             "denom": "ufis",
+	//             "denom": "umez",
 	//             "exponent": 0,
 	//             "aliases": [
-	//                 "microfis"
+	//                 "micromez"
 	//             ]
 	//         },
 	//         {
-	//             "denom": "mfis",
+	//             "denom": "mmez",
 	//             "exponent": 3,
 	//             "aliases": [
-	//               "millifis"
+	//               "millimez"
 	//             ]
 	//         },
 	//         {
-	//             "denom": "fis",
+	//             "denom": "mez",
 	//             "exponent": 6
 	//         }
 	//     ],
-	//     "base": "ufis",
-	//     "display": "fis",
-	//     "name": "FIS",
-	//     "symbol": "FIS"
+	//     "base": "umez",
+	//     "display": "mez",
+	//     "name": "MEZ",
+	//     "symbol": "MEZ"
 	// }
 	defaultGenesisState.DenomMetadata = append(defaultGenesisState.DenomMetadata,
 		types.Metadata{
@@ -57,22 +57,22 @@ func (am AppModuleBasic) DefaultGenesis(cdc codec.JSONCodec) json.RawMessage {
 				{
 					Denom:    utils.FisDenom,
 					Exponent: 0,
-					Aliases:  []string{"microfis"},
+					Aliases:  []string{"micromez"},
 				},
 				{
-					Denom:    "mfis",
+					Denom:    "mmez",
 					Exponent: 3,
-					Aliases:  []string{"millifis"},
+					Aliases:  []string{"millimez"},
 				},
 				{
-					Denom:    "fis",
+					Denom:    "mez",
 					Exponent: 6,
 				},
 			},
 			Base:    utils.FisDenom,
-			Display: "fis",
-			Name:    "FIS",
-			Symbol:  "FIS",
+			Display: "mez",
+			Name:    "MEZ",
+			Symbol:  "MEZ",
 		},
 	)
 	return cdc.MustMarshalJSON(defaultGenesisState)

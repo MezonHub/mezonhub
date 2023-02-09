@@ -34,7 +34,7 @@ Where mint_reward_act.json could be like this:
     "lockedBlocks": 100,
     "tokenRewardInfos": [
         {
-            "denom": "ufis",
+            "denom": "umez",
             "rewardRate": "0.000001",
             "totalRewardAmount": "10000000",
             "userLimit": "100"

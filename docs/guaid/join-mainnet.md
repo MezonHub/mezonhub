@@ -62,9 +62,9 @@ For optimized node performance, edit the `~/.mezonhub/config/app.toml` file to e
 
 # The minimum gas prices a validator is willing to accept for processing a
 # transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (for example, 10ufis).
+# specified in this config (for example, 10umez).
 
-minimum-gas-prices = "0.01ufis"
+minimum-gas-prices = "0.01umez"
 ```
 
 Your full node has been initialized!
@@ -97,7 +97,7 @@ If those seeds aren't working, you can find more seeds and persistent peers on a
 
 ## A Note on Gas and Fees
 
-On MeZonHub mainnet, the accepted denom is `ufis`, where `1fis = 1.000.000ufis`
+On MeZonHub mainnet, the accepted denom is `umez`, where `1mez = 1.000.000umez`
 
 Transactions on the MeZonHub network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
 
@@ -111,13 +111,13 @@ The `gasPrice` is the price of each unit of `gas`. Each validator sets a `min-ga
 
 The transaction `fees` are the product of `gas` and `gasPrice`. As a user, you have to input 2 out of 3. The higher the `gasPrice`/`fees`, the higher the chance that your transaction will get included in a block.
 
-For mainnet, the recommended `gas-prices` is `0.0025ufis`.
+For mainnet, the recommended `gas-prices` is `0.0025umez`.
 
 ## Set `minimum-gas-prices`
 
 Your full-node keeps unconfirmed transactions in its mempool. In order to protect it from spam, it is better to set a `minimum-gas-prices` that the transaction must meet in order to be accepted in your node's mempool. This parameter can be set in the following file `~/.mezonhub/config/app.toml`.
 
-The initial recommended `min-gas-prices` is `0.0025ufis`, but you might want to change it later.
+The initial recommended `min-gas-prices` is `0.0025umez`, but you might want to change it later.
 
 ## Pruning of State
 

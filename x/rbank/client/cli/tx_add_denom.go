@@ -33,27 +33,27 @@ Where metadata.json could be like this:
 	"description": "The native staking token of the MeZonHub.",
 	"denom_units": [
         {
-			"denom": "ufis",
+			"denom": "umez",
           	"exponent": 0,
           	"aliases": [
-            	"microfis"
+            	"micromez"
           	]
         },
         {
-          "denom": "mfis",
+          "denom": "mmez",
           "exponent": 3,
           "aliases": [
-            "millifis"
+            "millimez"
           ]
         },
         {
-          "denom": "fis",
+          "denom": "mez",
           "exponent": 6,
           "aliases": []
         }
       ],
-      "base": "ufis",
-      "display": "fis",
+      "base": "umez",
+      "display": "mez",
       "name": "",
       "symbol": ""
 }

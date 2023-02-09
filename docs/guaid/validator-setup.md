@@ -23,12 +23,12 @@ mezon tendermint show-validator
 To create your validator, just use the following command:
 
 ::: warning
-Don't use more `ufis` than you have!
+Don't use more `umez` than you have!
 :::
 
 ```bash
 mezon tx staking create-validator \
-  --amount=1000000ufis \
+  --amount=1000000umez \
   --pubkey=$(mezon tendermint show-validator) \
   --moniker="choose a moniker" \
   --chain-id=<chain_id> \
@@ -37,7 +37,7 @@ mezon tx staking create-validator \
   --commission-max-change-rate="0.01" \
   --min-self-delegation="1000000" \
   --gas="auto" \
-  --gas-prices="0.025ufis" \
+  --gas-prices="0.025umez" \
   --from=<key_name>
 ```
 
@@ -46,7 +46,7 @@ When specifying commission parameters, the `commission-max-change-rate` is used 
 :::
 
 ::: tip
-`Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated voting power your validator must always have. A `min-self-delegation` of `1000000` means your validator will never have a self-delegation lower than `1FIS`
+`Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated voting power your validator must always have. A `min-self-delegation` of `1000000` means your validator will never have a self-delegation lower than `1MEZ`
 :::
 
 You can confirm that you are in the validator set by using a third party explorer.
@@ -73,12 +73,12 @@ A `gentx` is a JSON file carrying a self-delegation. All genesis transactions ar
 :::
 
 ::: warning Note
-Don't use more `ufis` than you have!
+Don't use more `umez` than you have!
 :::
 
 ```bash
 mezon gentx \
-  --amount <amount_of_delegation_ufis> \
+  --amount <amount_of_delegation_umez> \
   --commission-rate <commission_rate> \
   --commission-max-rate <commission_max_rate> \
   --commission-max-change-rate <commission_max_change_rate> \
@@ -107,7 +107,7 @@ mezon tx staking edit-validator
   --details="To infinity and beyond!" \
   --chain-id=<chain_id> \
   --gas="auto" \
-  --gas-prices="0.025ufis" \
+  --gas-prices="0.025umez" \
   --from=<key_name> \
   --commission-rate="0.10"
 ```

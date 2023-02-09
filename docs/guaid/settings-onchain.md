@@ -68,8 +68,8 @@ mezon tx ledger set-unbond-commission uratom 0.0025 --from admin --chain-id loca
 
 mezon q ledger unbond-commission uratom
 
-# default 1000000ufis
-mezon tx ledger set-unbond-relay-fee uratom 1000005ufis --from admin --chain-id local-mezonhub --keyring-backend file
+# default 1000000umez
+mezon tx ledger set-unbond-relay-fee uratom 1000005umez --from admin --chain-id local-mezonhub --keyring-backend file
 
 mezon q ledger unbond-relay-fee uratom
 
@@ -149,7 +149,7 @@ mezon query bridge relay-fee-receiver
 
 
 
-mezon tx bridge set-relay-fee 1 1000000ufis --from admin --keyring-backend file --chain-id local-mezonhub
+mezon tx bridge set-relay-fee 1 1000000umez --from admin --keyring-backend file --chain-id local-mezonhub
 
 mezon query bridge  relay-fee 1
 
@@ -186,15 +186,15 @@ mezon query bridge denom-types
 ### rdex
 
 ```bash
-mezon tx rdex create-pool 10ufis 20uratom --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx rdex create-pool 10umez 20uratom --from admin --chain-id local-mezonhub --keyring-backend file
 
 mezon tx rdex add-provider mezon1qzt0qajzr9df3en5sk06xlk26n30003c8uhdkg --from admin --chain-id local-mezonhub --keyring-backend file
 
-mezon tx rdex add-liquidity  100ufis 200uratom --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx rdex add-liquidity  100umez 200uratom --from admin --chain-id local-mezonhub --keyring-backend file
 
-mezon tx rdex remove-liquidity 10 5 1uratom 1ufis ufis --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx rdex remove-liquidity 10 5 1uratom 1umez umez --from admin --chain-id local-mezonhub --keyring-backend file
 
-mezon tx rdex swap 2ufis 1uratom  --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx rdex swap 2umez 1uratom  --from admin --chain-id local-mezonhub --keyring-backend file
 ```
 
 ### mining
@@ -202,18 +202,18 @@ mezon tx rdex swap 2ufis 1uratom  --from admin --chain-id local-mezonhub --keyri
 ```bash
 mezon tx mining add-mining-provider mezon1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx  --from admin --chain-id local-mezonhub --keyring-backend file
 
-mezon tx mining add-reward-token ufis 200 --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx mining add-reward-token umez 200 --from admin --chain-id local-mezonhub --keyring-backend file
 
 
-mezon tx mining add-stake-pool ufis ./add_stake_pool_example.json  --from relay1 --chain-id local-mezonhub --keyring-backend file
+mezon tx mining add-stake-pool umez ./add_stake_pool_example.json  --from relay1 --chain-id local-mezonhub --keyring-backend file
 
-mezon tx mining stake 0 10ufis 0 --from my-account --chain-id local-mezonhub --keyring-backend file 
+mezon tx mining stake 0 10umez 0 --from my-account --chain-id local-mezonhub --keyring-backend file 
 
 mezon tx mining claim-reward 0 0 --from my-account --chain-id local-mezonhub --keyring-backend file
 
 mezon tx mining add-reward 1 0 300 0 0 --from relay1 --chain-id local-mezonhub --keyring-backend file
 
-mezon tx mining withdraw 1 10ufis 0 --from test --chain-id local-mezonhub --keyring-backend file
+mezon tx mining withdraw 1 10umez 0 --from test --chain-id local-mezonhub --keyring-backend file
 ```
 
 

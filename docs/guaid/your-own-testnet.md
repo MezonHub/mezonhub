@@ -45,10 +45,10 @@ mezon keys add my-account
 # Add that key into the genesis.app_state.accounts array in the genesis file
 # NOTE: this command lets you set the number of coins. Make sure this account has some coins
 # with the genesis.app_state.staking.params.bond_denom denom, the default is staking
-mezon add-genesis-account $(mezon keys show my-account -a) 1000000000ufis,1000000000validatortoken
+mezon add-genesis-account $(mezon keys show my-account -a) 1000000000umez,1000000000validatortoken
 
 # Generate the transaction that creates your validator
-mezon gentx my-account 1000000000ufis --chain-id my-chain
+mezon gentx my-account 1000000000umez --chain-id my-chain
 
 # Add the generated bonding transaction to the genesis file
 mezon collect-gentxs
