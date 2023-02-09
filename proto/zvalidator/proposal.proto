@@ -1,0 +1,34 @@
+syntax = "proto3";
+package mezonhub.mezonhub.zvalidator;
+
+// this line is used by starport scaffolding # proto/tx/import
+import "gogoproto/gogo.proto";
+import "zvalidator/genesis.proto";
+option go_package = "github.com/mezonhub/mezonhub/x/zvalidator/types";
+
+message UpdateZValidatorProposal {
+    string creator = 1;
+    string denom = 2;
+    string poolAddress = 3;
+    string oldAddress = 4;
+    string newAddress = 5;
+    string propId = 6;
+    Cycle cycle = 7;
+}
+
+message UpdateZValidatorReportProposal {
+    string creator = 1;
+    string denom = 2;
+    string poolAddress = 3;
+    string propId = 4;
+    Cycle cycle = 5;
+    UpdateZValidatorStatus status = 6;
+}
+
+enum UpdateZValidatorStatus {
+    option (gogoproto.goproto_enum_prefix) = false;
+  
+    UPDATE_ZVALIDATOR_STATUS_UNSPECIFIED = 0 [(gogoproto.enumvalue_customname) = "UpdateZValidatorStatusUnspecified"];
+    UPDATE_ZVALIDATOR_STATUS_SUCCESS = 1 [(gogoproto.enumvalue_customname) = "UpdateZValidatorStatusSuccess"];
+    UPDATE_ZVALIDATOR_STATUS_FAILED = 2 [(gogoproto.enumvalue_customname) = "UpdateZValidatorStatusFailed"];
+}

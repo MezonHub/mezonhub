@@ -1,0 +1,68 @@
+syntax = "proto3";
+package mezonhub.mezonhub.zvalidator;
+import "gogoproto/gogo.proto";
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "github.com/mezonhub/mezonhub/x/zvalidator/types";
+
+// Msg defines the Msg service.
+service Msg {
+  rpc InitZValidator(MsgInitZValidator) returns (MsgInitZValidatorResponse);
+  rpc SetCycleSeconds(MsgSetCycleSeconds) returns (MsgSetCycleSecondsResponse);
+  rpc SetShuffleSeconds(MsgSetShuffleSeconds) returns (MsgSetShuffleSecondsResponse);
+  rpc AddZValidator(MsgAddZValidator) returns (MsgAddZValidatorResponse);
+  rpc RmZValidator(MsgRmZValidator) returns (MsgRmZValidatorResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgInitZValidator {
+  string creator = 1;
+  string denom = 2;
+  string poolAddress = 3;
+  repeated string valAddressList = 4;
+}
+
+message MsgInitZValidatorResponse {
+}
+
+message MsgSetCycleSeconds {
+  string creator = 1;
+  string denom = 2;
+  uint64 seconds = 3 [(gogoproto.jsontag) = "seconds"];
+}
+
+message MsgSetCycleSecondsResponse {
+}
+
+message MsgSetShuffleSeconds {
+  string creator = 1;
+  string denom = 2;
+  uint64 seconds = 3 [(gogoproto.jsontag) = "seconds"];
+}
+
+message MsgSetShuffleSecondsResponse {
+}
+
+
+message MsgAddZValidator {
+  string creator = 1;
+  string denom = 2;
+  string poolAddress = 3;
+  string valAddress = 4;
+}
+
+message MsgAddZValidatorResponse {
+}
+
+message MsgRmZValidator {
+  string creator = 1;
+  string denom = 2;
+  string poolAddress = 3;
+  string oldAddress = 4;
+  string newAddress = 5;
+}
+
+message MsgRmZValidatorResponse {
+}
+
+// this line is used by starport scaffolding # proto/tx/message

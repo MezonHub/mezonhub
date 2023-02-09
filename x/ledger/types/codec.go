@@ -6,7 +6,7 @@ import (
 	cryptocodec "github.com/cosmos/cosmos-sdk/crypto/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/msgservice"
-	rvotetypes "github.com/mezonhub/mezonhub/x/rvote/types"
+	zvotetypes "github.com/mezonhub/mezonhub/x/zvote/types"
 )
 
 func RegisterCodec(cdc *codec.LegacyAmino) {
@@ -58,7 +58,7 @@ func RegisterInterfaces(registry cdctypes.InterfaceRegistry) {
 	)
 
 	registry.RegisterImplementations(
-		(*rvotetypes.Content)(nil),
+		(*zvotetypes.Content)(nil),
 		&SetChainEraProposal{},
 		&BondReportProposal{},
 		&ActiveReportProposal{},

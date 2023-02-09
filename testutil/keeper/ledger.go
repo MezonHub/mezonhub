@@ -30,8 +30,8 @@ func LedgerKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {
 
 	sudoKeeper, _ := SudoKeeper(t)
 	relayersKeeper, _ := RelayersKeeper(t)
-	rmintRewardKeeper, _ := RmintrewardKeeper(t)
-	rBankKeeper, _ := RbankKeeper(t)
+	zmintRewardKeeper, _ := ZmintrewardKeeper(t)
+	zBankKeeper, _ := ZbankKeeper(t)
 
 	ledgerKeeper := keeper.NewKeeper(
 		cdc,
@@ -40,8 +40,8 @@ func LedgerKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {
 		sudoKeeper,
 		BankKeeper,
 		relayersKeeper,
-		rmintRewardKeeper,
-		rBankKeeper,
+		zmintRewardKeeper,
+		zBankKeeper,
 		//todo impl keepers below
 		icacontrollerkeeper.Keeper{},
 		capabilitykeeper.ScopedKeeper{},

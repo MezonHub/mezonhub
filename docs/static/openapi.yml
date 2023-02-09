@@ -4582,8 +4582,8 @@ paths:
         - Query
   '/cosmos/distribution/v1beta1/delegators/{delegator_address}/validators':
     get:
-      summary: DelegatorValidators queries the validators of a delegator.
-      operationId: CosmosDistributionV1Beta1DelegatorValidators
+      summary: DelegatozValidators queries the validators of a delegator.
+      operationId: CosmosDistributionV1Beta1DelegatozValidators
       responses:
         '200':
           description: A successful response.
@@ -4598,8 +4598,8 @@ paths:
                   validators defines the validators a delegator is delegating
                   for.
             description: |-
-              QueryDelegatorValidatorsResponse is the response type for the
-              Query/DelegatorValidators RPC method.
+              QueryDelegatozValidatorsResponse is the response type for the
+              Query/DelegatozValidators RPC method.
         default:
           description: An unexpected error response.
           schema:
@@ -27883,10 +27883,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/mezonhub/mezonhub/rbank/address_prefix/{denom}':
+  '/mezonhub/mezonhub/zbank/address_prefix/{denom}':
     get:
       summary: Queries a list of AddressPrefix items.
-      operationId: MezonhubMezonhubRbankAddressPrefix
+      operationId: MezonhubMezonhubZbankAddressPrefix
       responses:
         '200':
           description: A successful response.
@@ -27922,10 +27922,10 @@ paths:
           type: string
       tags:
         - Query
-  /mezonhub/mezonhub/rbank/params:
+  /mezonhub/mezonhub/zbank/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: MezonhubMezonhubRbankParams
+      operationId: MezonhubMezonhubZbankParams
       responses:
         '200':
           description: A successful response.
@@ -27958,10 +27958,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rdex/params:
+  /mezonhub/mezonhub/zdex/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: MezonhubMezonhubRdexParams
+      operationId: MezonhubMezonhubZdexParams
       responses:
         '200':
           description: A successful response.
@@ -27994,10 +27994,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rdex/pool_creator_list:
+  /mezonhub/mezonhub/zdex/pool_creator_list:
     get:
       summary: Queries a list of PoolCreatorList items.
-      operationId: MezonhubMezonhubRdexPoolCreatorList
+      operationId: MezonhubMezonhubZdexPoolCreatorList
       responses:
         '200':
           description: A successful response.
@@ -28028,10 +28028,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rdex/provider_list:
+  /mezonhub/mezonhub/zdex/provider_list:
     get:
       summary: Queries a list of ProviderList items.
-      operationId: MezonhubMezonhubRdexProviderList
+      operationId: MezonhubMezonhubZdexProviderList
       responses:
         '200':
           description: A successful response.
@@ -28062,10 +28062,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rdex/provider_switch:
+  /mezonhub/mezonhub/zdex/provider_switch:
     get:
       summary: Queries a list of ProviderSwitch items.
-      operationId: MezonhubMezonhubRdexProviderSwitch
+      operationId: MezonhubMezonhubZdexProviderSwitch
       responses:
         '200':
           description: A successful response.
@@ -28094,10 +28094,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/mezonhub/mezonhub/rdex/swap_pool_info/{lpDenom}':
+  '/mezonhub/mezonhub/zdex/swap_pool_info/{lpDenom}':
     get:
       summary: Queries a list of SwapPoolInfo items.
-      operationId: MezonhubMezonhubRdexSwapPoolInfo
+      operationId: MezonhubMezonhubZdexSwapPoolInfo
       responses:
         '200':
           description: A successful response.
@@ -28180,10 +28180,10 @@ paths:
           type: string
       tags:
         - Query
-  /mezonhub/mezonhub/rdex/swap_pool_list:
+  /mezonhub/mezonhub/zdex/swap_pool_list:
     get:
       summary: Queries a list of SwapPoolList items.
-      operationId: MezonhubMezonhubRdexSwapPoolList
+      operationId: MezonhubMezonhubZdexSwapPoolList
       responses:
         '200':
           description: A successful response.
@@ -28348,10 +28348,10 @@ paths:
           type: string
       tags:
         - Query
-  '/mezonhub/mezonhub/rmintreward/act_current_cycle/{denom}':
+  '/mezonhub/mezonhub/zmintreward/act_current_cycle/{denom}':
     get:
       summary: Queries a list of ActCurrentCycle items.
-      operationId: MezonhubMezonhubRmintrewardActCurrentCycle
+      operationId: MezonhubMezonhubZmintrewardActCurrentCycle
       responses:
         '200':
           description: A successful response.
@@ -28386,10 +28386,10 @@ paths:
           type: string
       tags:
         - Query
-  '/mezonhub/mezonhub/rmintreward/act_detail/{denom}/{cycle}':
+  '/mezonhub/mezonhub/zmintreward/act_detail/{denom}/{cycle}':
     get:
       summary: Queries a list of ActDetail items.
-      operationId: MezonhubMezonhubRmintrewardActDetail
+      operationId: MezonhubMezonhubZmintrewardActDetail
       responses:
         '200':
           description: A successful response.
@@ -28457,10 +28457,10 @@ paths:
           format: uint64
       tags:
         - Query
-  '/mezonhub/mezonhub/rmintreward/act_latest_cycle/{denom}':
+  '/mezonhub/mezonhub/zmintreward/act_latest_cycle/{denom}':
     get:
       summary: Queries a list of ActLatestCycle items.
-      operationId: MezonhubMezonhubRmintrewardActLatestCycle
+      operationId: MezonhubMezonhubZmintrewardActLatestCycle
       responses:
         '200':
           description: A successful response.
@@ -28495,10 +28495,10 @@ paths:
           type: string
       tags:
         - Query
-  '/mezonhub/mezonhub/rmintreward/claim_info_detail/{address}/{denom}/{cycle}/{mintIndex}':
+  '/mezonhub/mezonhub/zmintreward/claim_info_detail/{address}/{denom}/{cycle}/{mintIndex}':
     get:
       summary: Queries a list of ClaimInfoDetail items.
-      operationId: MezonhubMezonhubRmintrewardClaimInfoDetail
+      operationId: MezonhubMezonhubZmintrewardClaimInfoDetail
       responses:
         '200':
           description: A successful response.
@@ -28568,10 +28568,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /mezonhub/mezonhub/rmintreward/params:
+  /mezonhub/mezonhub/zmintreward/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: MezonhubMezonhubRmintrewardParams
+      operationId: MezonhubMezonhubZmintrewardParams
       responses:
         '200':
           description: A successful response.
@@ -28604,10 +28604,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/mezonhub/mezonhub/rmintreward/user_acts/{address}/{denom}':
+  '/mezonhub/mezonhub/zmintreward/user_acts/{address}/{denom}':
     get:
       summary: Queries a list of UserActs items.
-      operationId: MezonhubMezonhubRmintrewardUserActs
+      operationId: MezonhubMezonhubZmintrewardUserActs
       responses:
         '200':
           description: A successful response.
@@ -28651,10 +28651,10 @@ paths:
           type: string
       tags:
         - Query
-  '/mezonhub/mezonhub/rmintreward/user_mint_count/{address}/{denom}/{cycle}':
+  '/mezonhub/mezonhub/zmintreward/user_mint_count/{address}/{denom}/{cycle}':
     get:
       summary: Queries a list of UserMintCount items.
-      operationId: MezonhubMezonhubRmintrewardUserMintCount
+      operationId: MezonhubMezonhubZmintrewardUserMintCount
       responses:
         '200':
           description: A successful response.
@@ -28698,10 +28698,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /mezonhub/mezonhub/rstaking/delegator_whitelist:
+  /mezonhub/mezonhub/zstaking/delegator_whitelist:
     get:
       summary: Queries a list of DelegatorWhitelist items.
-      operationId: MezonhubMezonhubRstakingDelegatorWhitelist
+      operationId: MezonhubMezonhubZstakingDelegatorWhitelist
       responses:
         '200':
           description: A successful response.
@@ -28732,10 +28732,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rstaking/delegator_whitelist_switch:
+  /mezonhub/mezonhub/zstaking/delegator_whitelist_switch:
     get:
       summary: Queries a list of DelegatorWhitelistSwitch items.
-      operationId: MezonhubMezonhubRstakingDelegatorWhitelistSwitch
+      operationId: MezonhubMezonhubZstakingDelegatorWhitelistSwitch
       responses:
         '200':
           description: A successful response.
@@ -28764,10 +28764,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rstaking/inflation_base:
+  /mezonhub/mezonhub/zstaking/inflation_base:
     get:
       summary: Queries a list of InflationBase items.
-      operationId: MezonhubMezonhubRstakingInflationBase
+      operationId: MezonhubMezonhubZstakingInflationBase
       responses:
         '200':
           description: A successful response.
@@ -28796,10 +28796,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rstaking/params:
+  /mezonhub/mezonhub/zstaking/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: MezonhubMezonhubRstakingParams
+      operationId: MezonhubMezonhubZstakingParams
       responses:
         '200':
           description: A successful response.
@@ -28832,10 +28832,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rstaking/validator_whitelist:
+  /mezonhub/mezonhub/zstaking/validator_whitelist:
     get:
       summary: Queries a list of ValidatorWhitelist items.
-      operationId: MezonhubMezonhubRstakingValidatorWhitelist
+      operationId: MezonhubMezonhubZstakingValidatorWhitelist
       responses:
         '200':
           description: A successful response.
@@ -28866,10 +28866,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /mezonhub/mezonhub/rstaking/validator_whitelist_switch:
+  /mezonhub/mezonhub/zstaking/validator_whitelist_switch:
     get:
       summary: Queries a list of WhitelistSwitch items.
-      operationId: MezonhubMezonhubRstakingValidatorWhitelistSwitch
+      operationId: MezonhubMezonhubZstakingValidatorWhitelistSwitch
       responses:
         '200':
           description: A successful response.
@@ -28898,10 +28898,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/mezonhub/mezonhub/rvalidator/cycle_seconds/{denom}':
+  '/mezonhub/mezonhub/zvalidator/cycle_seconds/{denom}':
     get:
       summary: Queries a list of CycleSeconds items.
-      operationId: MezonhubMezonhubRvalidatorCycleSeconds
+      operationId: MezonhubMezonhubZvalidatorCycleSeconds
       responses:
         '200':
           description: A successful response.
@@ -28944,10 +28944,10 @@ paths:
           type: string
       tags:
         - Query
-  '/mezonhub/mezonhub/rvalidator/latest_dealed_cycle/{denom}/{poolAddress}':
+  '/mezonhub/mezonhub/zvalidator/latest_dealed_cycle/{denom}/{poolAddress}':
     get:
       summary: Queries a list of LatestDealedCycle items.
-      operationId: MezonhubMezonhubRvalidatorLatestDealedCycle
+      operationId: MezonhubMezonhubZvalidatorLatestDealedCycle
       responses:
         '200':
           description: A successful response.
@@ -28996,10 +28996,10 @@ paths:
           type: string
       tags:
         - Query
-  '/mezonhub/mezonhub/rvalidator/latest_voted_cycle/{denom}/{poolAddress}':
+  '/mezonhub/mezonhub/zvalidator/latest_voted_cycle/{denom}/{poolAddress}':
     get:
       summary: Queries a list of LatestVotedCycle items.
-      operationId: MezonhubMezonhubRvalidatorLatestVotedCycle
+      operationId: MezonhubMezonhubZvalidatorLatestVotedCycle
       responses:
         '200':
           description: A successful response.
@@ -29048,10 +29048,10 @@ paths:
           type: string
       tags:
         - Query
-  /mezonhub/mezonhub/rvalidator/params:
+  /mezonhub/mezonhub/zvalidator/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: MezonhubMezonhubRvalidatorParams
+      operationId: MezonhubMezonhubZvalidatorParams
       responses:
         '200':
           description: A successful response.
@@ -29084,17 +29084,17 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/mezonhub/mezonhub/rvalidator/r_validator_list/{denom}/{poolAddress}':
+  '/mezonhub/mezonhub/zvalidator/r_validator_list/{denom}/{poolAddress}':
     get:
-      summary: Queries a list of RValidatorList items.
-      operationId: MezonhubMezonhubRvalidatorRValidatorList
+      summary: Queries a list of ZValidatorList items.
+      operationId: MezonhubMezonhubZvalidatorZValidatorList
       responses:
         '200':
           description: A successful response.
           schema:
             type: object
             properties:
-              rValidatorList:
+              zValidatorList:
                 type: array
                 items:
                   type: string
@@ -29127,10 +29127,10 @@ paths:
           type: string
       tags:
         - Query
-  '/mezonhub/mezonhub/rvalidator/shuffle_seconds/{denom}':
+  '/mezonhub/mezonhub/zvalidator/shuffle_seconds/{denom}':
     get:
       summary: Queries a list of ShuffleSeconds items.
-      operationId: MezonhubMezonhubRvalidatorShuffleSeconds
+      operationId: MezonhubMezonhubZvalidatorShuffleSeconds
       responses:
         '200':
           description: A successful response.
@@ -29173,7 +29173,7 @@ paths:
           type: string
       tags:
         - Query
-  '/mezonhub/mezonhub/rvote/get_proposal/{propId}':
+  '/mezonhub/mezonhub/zvote/get_proposal/{propId}':
     get:
       summary: Queries a list of getProposal items.
       operationId: MezonhubMezonhubRvoteGetProposal
@@ -29377,7 +29377,7 @@ paths:
           type: string
       tags:
         - Query
-  /mezonhub/mezonhub/rvote/get_proposal_life:
+  /mezonhub/mezonhub/zvote/get_proposal_life:
     get:
       summary: Queries a list of getProposalLife items.
       operationId: MezonhubMezonhubRvoteGetProposalLife
@@ -34954,7 +34954,7 @@ definitions:
     description: |-
       QueryDelegationTotalRewardsResponse is the response type for the
       Query/DelegationTotalRewards RPC method.
-  cosmos.distribution.v1beta1.QueryDelegatorValidatorsResponse:
+  cosmos.distribution.v1beta1.QueryDelegatozValidatorsResponse:
     type: object
     properties:
       validators:
@@ -34963,8 +34963,8 @@ definitions:
           type: string
         description: validators defines the validators a delegator is delegating for.
     description: |-
-      QueryDelegatorValidatorsResponse is the response type for the
-      Query/DelegatorValidators RPC method.
+      QueryDelegatozValidatorsResponse is the response type for the
+      Query/DelegatozValidators RPC method.
   cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressResponse:
     type: object
     properties:
@@ -46911,73 +46911,73 @@ definitions:
     description: |-
       Metadata represents a struct that describes
       a basic token.
-  mezonhub.mezonhub.rbank.MsgAddDenomResponse:
+  mezonhub.mezonhub.zbank.MsgAddDenomResponse:
     type: object
-  mezonhub.mezonhub.rbank.Params:
+  mezonhub.mezonhub.zbank.Params:
     type: object
     description: Params defines the parameters for the module.
-  mezonhub.mezonhub.rbank.QueryAddressPrefixResponse:
+  mezonhub.mezonhub.zbank.QueryAddressPrefixResponse:
     type: object
     properties:
       accAddressPrefix:
         type: string
       valAddressPrefix:
         type: string
-  mezonhub.mezonhub.rbank.QueryParamsResponse:
+  mezonhub.mezonhub.zbank.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  mezonhub.mezonhub.rdex.MsgAddLiquidityResponse:
+  mezonhub.mezonhub.zdex.MsgAddLiquidityResponse:
     type: object
-  mezonhub.mezonhub.rdex.MsgAddPoolCreatorResponse:
+  mezonhub.mezonhub.zdex.MsgAddPoolCreatorResponse:
     type: object
-  mezonhub.mezonhub.rdex.MsgAddProviderResponse:
+  mezonhub.mezonhub.zdex.MsgAddProviderResponse:
     type: object
-  mezonhub.mezonhub.rdex.MsgCreatePoolResponse:
+  mezonhub.mezonhub.zdex.MsgCreatePoolResponse:
     type: object
-  mezonhub.mezonhub.rdex.MsgRemoveLiquidityResponse:
+  mezonhub.mezonhub.zdex.MsgRemoveLiquidityResponse:
     type: object
-  mezonhub.mezonhub.rdex.MsgRmPoolCreatorResponse:
+  mezonhub.mezonhub.zdex.MsgRmPoolCreatorResponse:
     type: object
-  mezonhub.mezonhub.rdex.MsgRmProviderResponse:
+  mezonhub.mezonhub.zdex.MsgRmProviderResponse:
     type: object
-  mezonhub.mezonhub.rdex.MsgSwapResponse:
+  mezonhub.mezonhub.zdex.MsgSwapResponse:
     type: object
-  mezonhub.mezonhub.rdex.MsgToggleProviderSwitchResponse:
+  mezonhub.mezonhub.zdex.MsgToggleProviderSwitchResponse:
     type: object
-  mezonhub.mezonhub.rdex.Params:
+  mezonhub.mezonhub.zdex.Params:
     type: object
     description: Params defines the parameters for the module.
-  mezonhub.mezonhub.rdex.QueryParamsResponse:
+  mezonhub.mezonhub.zdex.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  mezonhub.mezonhub.rdex.QueryPoolCreatorListResponse:
+  mezonhub.mezonhub.zdex.QueryPoolCreatorListResponse:
     type: object
     properties:
       poolCreatorList:
         type: array
         items:
           type: string
-  mezonhub.mezonhub.rdex.QueryProviderListResponse:
+  mezonhub.mezonhub.zdex.QueryProviderListResponse:
     type: object
     properties:
       providerList:
         type: array
         items:
           type: string
-  mezonhub.mezonhub.rdex.QueryProviderSwitchResponse:
+  mezonhub.mezonhub.zdex.QueryProviderSwitchResponse:
     type: object
     properties:
       providerSwitch:
         type: boolean
-  mezonhub.mezonhub.rdex.QuerySwapPoolInfoResponse:
+  mezonhub.mezonhub.zdex.QuerySwapPoolInfoResponse:
     type: object
     properties:
       swapPool:
@@ -47031,7 +47031,7 @@ definitions:
               method
 
               signatures required by gogoproto.
-  mezonhub.mezonhub.rdex.QuerySwapPoolListResponse:
+  mezonhub.mezonhub.zdex.QuerySwapPoolListResponse:
     type: object
     properties:
       swapPoolList:
@@ -47087,7 +47087,7 @@ definitions:
                 method
 
                 signatures required by gogoproto.
-  mezonhub.mezonhub.rdex.SwapPool:
+  mezonhub.mezonhub.zdex.SwapPool:
     type: object
     properties:
       index:
@@ -47148,7 +47148,7 @@ definitions:
       threshold:
         type: integer
         format: int64
-  mezonhub.mezonhub.rmintreward.Acts:
+  mezonhub.mezonhub.zmintreward.Acts:
     type: object
     properties:
       acts:
@@ -47156,7 +47156,7 @@ definitions:
         items:
           type: string
           format: uint64
-  mezonhub.mezonhub.rmintreward.MintRewardAct:
+  mezonhub.mezonhub.zmintreward.MintRewardAct:
     type: object
     properties:
       begin:
@@ -47187,7 +47187,7 @@ definitions:
               type: string
             userLimit:
               type: string
-  mezonhub.mezonhub.rmintreward.MintRewardActPost:
+  mezonhub.mezonhub.zmintreward.MintRewardActPost:
     type: object
     properties:
       begin:
@@ -47212,24 +47212,24 @@ definitions:
               type: string
             userLimit:
               type: string
-  mezonhub.mezonhub.rmintreward.MsgAddMintRewardActResponse:
+  mezonhub.mezonhub.zmintreward.MsgAddMintRewardActResponse:
     type: object
-  mezonhub.mezonhub.rmintreward.MsgClaimMintRewardResponse:
+  mezonhub.mezonhub.zmintreward.MsgClaimMintRewardResponse:
     type: object
-  mezonhub.mezonhub.rmintreward.MsgProvideRewardTokenResponse:
+  mezonhub.mezonhub.zmintreward.MsgProvideRewardTokenResponse:
     type: object
-  mezonhub.mezonhub.rmintreward.MsgUpdateMintRewardActResponse:
+  mezonhub.mezonhub.zmintreward.MsgUpdateMintRewardActResponse:
     type: object
-  mezonhub.mezonhub.rmintreward.Params:
+  mezonhub.mezonhub.zmintreward.Params:
     type: object
     description: Params defines the parameters for the module.
-  mezonhub.mezonhub.rmintreward.QueryActCurrentCycleResponse:
+  mezonhub.mezonhub.zmintreward.QueryActCurrentCycleResponse:
     type: object
     properties:
       currentCycle:
         type: string
         format: uint64
-  mezonhub.mezonhub.rmintreward.QueryActDetailResponse:
+  mezonhub.mezonhub.zmintreward.QueryActDetailResponse:
     type: object
     properties:
       act:
@@ -47263,13 +47263,13 @@ definitions:
                   type: string
                 userLimit:
                   type: string
-  mezonhub.mezonhub.rmintreward.QueryActLatestCycleResponse:
+  mezonhub.mezonhub.zmintreward.QueryActLatestCycleResponse:
     type: object
     properties:
       latestCycle:
         type: string
         format: uint64
-  mezonhub.mezonhub.rmintreward.QueryClaimInfoDetailResponse:
+  mezonhub.mezonhub.zmintreward.QueryClaimInfoDetailResponse:
     type: object
     properties:
       claimInfo:
@@ -47296,14 +47296,14 @@ definitions:
                   type: string
                 totalClaimedAmount:
                   type: string
-  mezonhub.mezonhub.rmintreward.QueryParamsResponse:
+  mezonhub.mezonhub.zmintreward.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  mezonhub.mezonhub.rmintreward.QueryUserActsResponse:
+  mezonhub.mezonhub.zmintreward.QueryUserActsResponse:
     type: object
     properties:
       acts:
@@ -47314,13 +47314,13 @@ definitions:
             items:
               type: string
               format: uint64
-  mezonhub.mezonhub.rmintreward.QueryUserMintCountResponse:
+  mezonhub.mezonhub.zmintreward.QueryUserMintCountResponse:
     type: object
     properties:
       count:
         type: string
         format: uint64
-  mezonhub.mezonhub.rmintreward.TokenClaimInfo:
+  mezonhub.mezonhub.zmintreward.TokenClaimInfo:
     type: object
     properties:
       denom:
@@ -47329,7 +47329,7 @@ definitions:
         type: string
       totalClaimedAmount:
         type: string
-  mezonhub.mezonhub.rmintreward.TokenRewardInfo:
+  mezonhub.mezonhub.zmintreward.TokenRewardInfo:
     type: object
     properties:
       denom:
@@ -47342,7 +47342,7 @@ definitions:
         type: string
       userLimit:
         type: string
-  mezonhub.mezonhub.rmintreward.TokenRewardInfoPost:
+  mezonhub.mezonhub.zmintreward.TokenRewardInfoPost:
     type: object
     properties:
       denom:
@@ -47353,7 +47353,7 @@ definitions:
         type: string
       userLimit:
         type: string
-  mezonhub.mezonhub.rmintreward.UserClaimInfo:
+  mezonhub.mezonhub.zmintreward.UserClaimInfo:
     type: object
     properties:
       mintRTokenAmount:
@@ -47377,62 +47377,62 @@ definitions:
               type: string
             totalClaimedAmount:
               type: string
-  mezonhub.mezonhub.rstaking.MsgAddDelegatorToWhitelistResponse:
+  mezonhub.mezonhub.zstaking.MsgAddDelegatorToWhitelistResponse:
     type: object
-  mezonhub.mezonhub.rstaking.MsgAddValToWhitelistResponse:
+  mezonhub.mezonhub.zstaking.MsgAddValToWhitelistResponse:
     type: object
-  mezonhub.mezonhub.rstaking.MsgProvideTokenResponse:
+  mezonhub.mezonhub.zstaking.MsgProvideTokenResponse:
     type: object
-  mezonhub.mezonhub.rstaking.MsgRmDelegatorFromWhitelistResponse:
+  mezonhub.mezonhub.zstaking.MsgRmDelegatorFromWhitelistResponse:
     type: object
-  mezonhub.mezonhub.rstaking.MsgSetInflationBaseResponse:
+  mezonhub.mezonhub.zstaking.MsgSetInflationBaseResponse:
     type: object
-  mezonhub.mezonhub.rstaking.MsgToggleDelegatorWhitelistSwitchResponse:
+  mezonhub.mezonhub.zstaking.MsgToggleDelegatorWhitelistSwitchResponse:
     type: object
-  mezonhub.mezonhub.rstaking.MsgToggleValidatorWhitelistSwitchResponse:
+  mezonhub.mezonhub.zstaking.MsgToggleValidatorWhitelistSwitchResponse:
     type: object
-  mezonhub.mezonhub.rstaking.MsgWithdrawResponse:
+  mezonhub.mezonhub.zstaking.MsgWithdrawResponse:
     type: object
-  mezonhub.mezonhub.rstaking.Params:
+  mezonhub.mezonhub.zstaking.Params:
     type: object
     description: Params defines the parameters for the module.
-  mezonhub.mezonhub.rstaking.QueryDelegatorWhitelistResponse:
+  mezonhub.mezonhub.zstaking.QueryDelegatorWhitelistResponse:
     type: object
     properties:
       delegatorAddress:
         type: array
         items:
           type: string
-  mezonhub.mezonhub.rstaking.QueryDelegatorWhitelistSwitchResponse:
+  mezonhub.mezonhub.zstaking.QueryDelegatorWhitelistSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  mezonhub.mezonhub.rstaking.QueryInflationBaseResponse:
+  mezonhub.mezonhub.zstaking.QueryInflationBaseResponse:
     type: object
     properties:
       inflationBase:
         type: string
-  mezonhub.mezonhub.rstaking.QueryParamsResponse:
+  mezonhub.mezonhub.zstaking.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  mezonhub.mezonhub.rstaking.QueryValidatorWhitelistResponse:
+  mezonhub.mezonhub.zstaking.QueryValidatorWhitelistResponse:
     type: object
     properties:
       valAddress:
         type: array
         items:
           type: string
-  mezonhub.mezonhub.rstaking.QueryValidatorWhitelistSwitchResponse:
+  mezonhub.mezonhub.zstaking.QueryValidatorWhitelistSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  mezonhub.mezonhub.rvalidator.Cycle:
+  mezonhub.mezonhub.zvalidator.Cycle:
     type: object
     properties:
       denom:
@@ -47445,7 +47445,7 @@ definitions:
       number:
         type: string
         format: uint64
-  mezonhub.mezonhub.rvalidator.CycleSeconds:
+  mezonhub.mezonhub.zvalidator.CycleSeconds:
     type: object
     properties:
       denom:
@@ -47456,20 +47456,20 @@ definitions:
       seconds:
         type: string
         format: uint64
-  mezonhub.mezonhub.rvalidator.MsgAddRValidatorResponse:
+  mezonhub.mezonhub.zvalidator.MsgAddZValidatorResponse:
     type: object
-  mezonhub.mezonhub.rvalidator.MsgInitRValidatorResponse:
+  mezonhub.mezonhub.zvalidator.MsgInitZValidatorResponse:
     type: object
-  mezonhub.mezonhub.rvalidator.MsgRmRValidatorResponse:
+  mezonhub.mezonhub.zvalidator.MsgRmZValidatorResponse:
     type: object
-  mezonhub.mezonhub.rvalidator.MsgSetCycleSecondsResponse:
+  mezonhub.mezonhub.zvalidator.MsgSetCycleSecondsResponse:
     type: object
-  mezonhub.mezonhub.rvalidator.MsgSetShuffleSecondsResponse:
+  mezonhub.mezonhub.zvalidator.MsgSetShuffleSecondsResponse:
     type: object
-  mezonhub.mezonhub.rvalidator.Params:
+  mezonhub.mezonhub.zvalidator.Params:
     type: object
     description: Params defines the parameters for the module.
-  mezonhub.mezonhub.rvalidator.QueryCycleSecondsResponse:
+  mezonhub.mezonhub.zvalidator.QueryCycleSecondsResponse:
     type: object
     properties:
       cycleSeconds:
@@ -47483,7 +47483,7 @@ definitions:
           seconds:
             type: string
             format: uint64
-  mezonhub.mezonhub.rvalidator.QueryLatestDealedCycleResponse:
+  mezonhub.mezonhub.zvalidator.QueryLatestDealedCycleResponse:
     type: object
     properties:
       latestDealedCycle:
@@ -47499,7 +47499,7 @@ definitions:
           number:
             type: string
             format: uint64
-  mezonhub.mezonhub.rvalidator.QueryLatestVotedCycleResponse:
+  mezonhub.mezonhub.zvalidator.QueryLatestVotedCycleResponse:
     type: object
     properties:
       latestVotedCycle:
@@ -47515,21 +47515,21 @@ definitions:
           number:
             type: string
             format: uint64
-  mezonhub.mezonhub.rvalidator.QueryParamsResponse:
+  mezonhub.mezonhub.zvalidator.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  mezonhub.mezonhub.rvalidator.QueryRValidatorListResponse:
+  mezonhub.mezonhub.zvalidator.QueryZValidatorListResponse:
     type: object
     properties:
-      rValidatorList:
+      zValidatorList:
         type: array
         items:
           type: string
-  mezonhub.mezonhub.rvalidator.QueryShuffleSecondsResponse:
+  mezonhub.mezonhub.zvalidator.QueryShuffleSecondsResponse:
     type: object
     properties:
       shuffleSeconds:
@@ -47543,7 +47543,7 @@ definitions:
           seconds:
             type: string
             format: uint64
-  mezonhub.mezonhub.rvalidator.ShuffleSeconds:
+  mezonhub.mezonhub.zvalidator.ShuffleSeconds:
     type: object
     properties:
       denom:
@@ -47554,9 +47554,9 @@ definitions:
       seconds:
         type: string
         format: uint64
-  mezonhub.mezonhub.rvote.MsgSetProposalLifeResponse:
+  mezonhub.mezonhub.zvote.MsgSetProposalLifeResponse:
     type: object
-  mezonhub.mezonhub.rvote.MsgSubmitProposalResponse:
+  mezonhub.mezonhub.zvote.MsgSubmitProposalResponse:
     type: object
     properties:
       propId:
@@ -47569,7 +47569,7 @@ definitions:
           - PROPOSAL_STATUS_EXPIRED
         default: PROPOSAL_STATUS_INITIATED
         description: ProposalStatus enumerates the valid statuses of a proposal.
-  mezonhub.mezonhub.rvote.ProposalStatus:
+  mezonhub.mezonhub.zvote.ProposalStatus:
     type: string
     enum:
       - PROPOSAL_STATUS_INITIATED
@@ -47577,13 +47577,13 @@ definitions:
       - PROPOSAL_STATUS_EXPIRED
     default: PROPOSAL_STATUS_INITIATED
     description: ProposalStatus enumerates the valid statuses of a proposal.
-  mezonhub.mezonhub.rvote.QueryGetProposalLifeResponse:
+  mezonhub.mezonhub.zvote.QueryGetProposalLifeResponse:
     type: object
     properties:
       proposalLife:
         type: string
         format: int64
-  mezonhub.mezonhub.rvote.QueryGetProposalResponse:
+  mezonhub.mezonhub.zvote.QueryGetProposalResponse:
     type: object
     properties:
       proposal:

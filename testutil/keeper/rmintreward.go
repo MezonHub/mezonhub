@@ -9,15 +9,15 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	typesparams "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/mezonhub/mezonhub/x/rmintreward/keeper"
-	"github.com/mezonhub/mezonhub/x/rmintreward/types"
+	"github.com/mezonhub/mezonhub/x/zmintreward/keeper"
+	"github.com/mezonhub/mezonhub/x/zmintreward/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmdb "github.com/tendermint/tm-db"
 )
 
-func RmintrewardKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
+func ZmintrewardKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 	storeKey := sdk.NewKVStoreKey(types.StoreKey)
 	memStoreKey := storetypes.NewMemoryStoreKey(types.MemStoreKey)
 
@@ -34,7 +34,7 @@ func RmintrewardKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 		types.Amino,
 		storeKey,
 		memStoreKey,
-		"RmintrewardParams",
+		"ZmintrewardParams",
 	)
 	sudoKeeper, _ := SudoKeeper(t)
 	k := keeper.NewKeeper(

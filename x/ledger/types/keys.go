@@ -53,8 +53,8 @@ var (
 	BondRecordPrefix                 = []byte{0x14}
 	SignaturePrefix                  = []byte{0x15}
 	RParamsPrefix                    = []byte{0x16}
-	RValidatorIndicatorPrefix        = []byte{0x17}
-	RValidatorPrefix                 = []byte{0x18}
+	ZValidatorIndicatorPrefix        = []byte{0x17}
+	ZValidatorPrefix                 = []byte{0x18}
 	TotalProtocolFeePrefix           = []byte{0x19}
 	RelayFeeReceiverPrefix           = []byte{0x1a}
 	UnbondSwitchPrefix               = []byte{0x1b}

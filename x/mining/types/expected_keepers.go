@@ -28,6 +28,6 @@ type SudoKeeper interface {
 	IsAdmin(ctx sdk.Context, address string) bool
 }
 
-type RDexKeeper interface {
-	IsRDexLpToken(ctx sdk.Context, denom string) bool
+type ZDexKeeper interface {
+	IsZDexLpToken(ctx sdk.Context, denom string) bool
 }

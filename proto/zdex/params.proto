@@ -1,0 +1,12 @@
+syntax = "proto3";
+package mezonhub.mezonhub.zdex;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/mezonhub/mezonhub/x/zdex/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (gogoproto.goproto_stringer) = false;
+  
+}

@@ -9,23 +9,23 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	typesparams "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/mezonhub/mezonhub/x/rdex/keeper"
-	"github.com/mezonhub/mezonhub/x/rdex/types"
+	"github.com/mezonhub/mezonhub/x/zdex/keeper"
+	"github.com/mezonhub/mezonhub/x/zdex/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )
 
 var (
-	rdexStoreKey    = sdk.NewKVStoreKey(types.StoreKey)
-	rdexMemStoreKey = storetypes.NewMemoryStoreKey(types.MemStoreKey)
-	rdexOnce        sync.Once
+	zdexStoreKey    = sdk.NewKVStoreKey(types.StoreKey)
+	zdexMemStoreKey = storetypes.NewMemoryStoreKey(types.MemStoreKey)
+	zdexOnce        sync.Once
 )
 
-func RdexKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
-	rdexOnce.Do(func() {
-		stateStore.MountStoreWithDB(rdexStoreKey, sdk.StoreTypeIAVL, db)
-		stateStore.MountStoreWithDB(rdexMemStoreKey, sdk.StoreTypeMemory, nil)
+func ZdexKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
+	zdexOnce.Do(func() {
+		stateStore.MountStoreWithDB(zdexStoreKey, sdk.StoreTypeIAVL, db)
+		stateStore.MountStoreWithDB(zdexMemStoreKey, sdk.StoreTypeMemory, nil)
 	})
 	require.NoError(t, stateStore.LoadLatestVersion())
 
@@ -33,15 +33,15 @@ func RdexKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 	cdc := codec.NewProtoCodec(registry)
 	paramsSubspace := typesparams.NewSubspace(cdc,
 		types.Amino,
-		rdexStoreKey,
-		rdexMemStoreKey,
-		"RdexParams",
+		zdexStoreKey,
+		zdexMemStoreKey,
+		"ZdexParams",
 	)
 	sudoKeeper, _ := SudoKeeper(t)
 	k := keeper.NewKeeper(
 		cdc,
-		rdexStoreKey,
-		rdexMemStoreKey,
+		zdexStoreKey,
+		zdexMemStoreKey,
 		paramsSubspace,
 		BankKeeper,
 		sudoKeeper,

@@ -14,11 +14,11 @@ mezon query ledger protocol-fee-receiver
 
 ```bash
 # set rtoken metadata
-mezon tx rbank add-denom cosmos cosmosvaloper ./metadata/metadata_ratom.json --chain-id local-mezonhub --from admin --keyring-backend file
+mezon tx zbank add-denom cosmos cosmosvaloper ./metadata/metadata_ratom.json --chain-id local-mezonhub --from admin --keyring-backend file
 
 mezon query bank denom-metadata
 
-mezon query rbank address-prefix uratom
+mezon query zbank address-prefix uratom
 
 # set relay fee receiver
 mezon tx ledger set-relay-fee-receiver uratom mezon1mgjkpyfm00mxk0nmhvfvwhlr65067d538l6cxa --from admin --chain-id local-mezonhub --keyring-backend file
@@ -87,31 +87,31 @@ mezon tx ledger set-withdrawal-addr cosmos1gsth46z50w256p4kq36xquh4q90mfjq0t4lm9
 
 ```
 
-### rvalidator
+### zvalidator
 
 ```bash
 # add relayers
-mezon tx relayers add-relayers rvalidator uratom mezon14z467aut40mcrt2ddyxf7e74fq99udul7kaf9g:mezon15lne70yk254s0pm2da6g59r82cjymzjqvvqxz7 --keyring-backend file --from admin --chain-id local-mezonhub
+mezon tx relayers add-relayers zvalidator uratom mezon14z467aut40mcrt2ddyxf7e74fq99udul7kaf9g:mezon15lne70yk254s0pm2da6g59r82cjymzjqvvqxz7 --keyring-backend file --from admin --chain-id local-mezonhub
 
-mezon q relayers relayers rvalidator uratom
+mezon q relayers relayers zvalidator uratom
 
 # set threshold
-mezon tx relayers set-threshold rvalidator uratom 1 --from admin --keyring-backend file --chain-id local-mezonhub
+mezon tx relayers set-threshold zvalidator uratom 1 --from admin --keyring-backend file --chain-id local-mezonhub
 
-mezon q relayers threshold rvalidator uratom
+mezon q relayers threshold zvalidator uratom
 
-# init rvalidator (should init target validators of pool before rtoken relay start)
-mezon tx rvalidator init-r-validator uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 cosmosvaloper129kf5egy80e8me93lg3h5lk54kp0tle7w9npre --from admin --chain-id local-mezonhub --keyring-backend file  
+# init zvalidator (should init target validators of pool before rtoken relay start)
+mezon tx zvalidator init-r-validator uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 cosmosvaloper129kf5egy80e8me93lg3h5lk54kp0tle7w9npre --from admin --chain-id local-mezonhub --keyring-backend file  
 
-mezon q rvalidator r-validator-list uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75
+mezon q zvalidator r-validator-list uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75
 
-# add rvalidator
-mezon tx rvalidator add-r-validator uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 cosmosvaloper1cad0efr25faywnjp8qp36l8zlqa2sgz0h686mv  --chain-id local-mezonhub --keyring-backend file --from admin
+# add zvalidator
+mezon tx zvalidator add-r-validator uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 cosmosvaloper1cad0efr25faywnjp8qp36l8zlqa2sgz0h686mv  --chain-id local-mezonhub --keyring-backend file --from admin
 
-mezon q rvalidator r-validator-list uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75
+mezon q zvalidator r-validator-list uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75
 
-# rm rvalidator
-mezon tx rvalidator rm-r-validator uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 cosmosvaloper1cad0efr25faywnjp8qp36l8zlqa2sgz0h686mv cosmosvaloper129kf5egy80e8me93lg3h5lk54kp0tle7w9npre --from admin --chain-id local-mezonhub --keyring-backend file
+# rm zvalidator
+mezon tx zvalidator rm-r-validator uratom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 cosmosvaloper1cad0efr25faywnjp8qp36l8zlqa2sgz0h686mv cosmosvaloper129kf5egy80e8me93lg3h5lk54kp0tle7w9npre --from admin --chain-id local-mezonhub --keyring-backend file
 ```
 
 
@@ -183,18 +183,18 @@ mezon tx bridge set-denom-type uratom  1 --from admin --keyring-backend file --c
 mezon query bridge denom-types
 ```
 
-### rdex
+### zdex
 
 ```bash
-mezon tx rdex create-pool 10umez 20uratom --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx zdex create-pool 10umez 20uratom --from admin --chain-id local-mezonhub --keyring-backend file
 
-mezon tx rdex add-provider mezon1qzt0qajzr9df3en5sk06xlk26n30003c8uhdkg --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx zdex add-provider mezon1qzt0qajzr9df3en5sk06xlk26n30003c8uhdkg --from admin --chain-id local-mezonhub --keyring-backend file
 
-mezon tx rdex add-liquidity  100umez 200uratom --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx zdex add-liquidity  100umez 200uratom --from admin --chain-id local-mezonhub --keyring-backend file
 
-mezon tx rdex remove-liquidity 10 5 1uratom 1umez umez --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx zdex remove-liquidity 10 5 1uratom 1umez umez --from admin --chain-id local-mezonhub --keyring-backend file
 
-mezon tx rdex swap 2umez 1uratom  --from admin --chain-id local-mezonhub --keyring-backend file
+mezon tx zdex swap 2umez 1uratom  --from admin --chain-id local-mezonhub --keyring-backend file
 ```
 
 ### mining

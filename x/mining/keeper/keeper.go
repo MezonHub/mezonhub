@@ -23,7 +23,7 @@ type (
 
 		sudoKeeper types.SudoKeeper
 		bankKeeper types.BankKeeper
-		rDexKeeper types.RDexKeeper
+		zDexKeeper types.ZDexKeeper
 	}
 )
 
@@ -34,7 +34,7 @@ func NewKeeper(
 	ps paramtypes.Subspace,
 	sudoKeeper types.SudoKeeper,
 	bankKeeper types.BankKeeper,
-	rDexKeeper types.RDexKeeper,
+	zDexKeeper types.ZDexKeeper,
 ) *Keeper {
 	// set KeyTable if it has not already been set
 	if !ps.HasKeyTable() {
@@ -48,7 +48,7 @@ func NewKeeper(
 		paramstore: ps,
 		sudoKeeper: sudoKeeper,
 		bankKeeper: bankKeeper,
-		rDexKeeper: rDexKeeper,
+		zDexKeeper: zDexKeeper,
 	}
 }
 

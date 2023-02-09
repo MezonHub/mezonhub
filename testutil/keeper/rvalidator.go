@@ -9,15 +9,15 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	typesparams "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/mezonhub/mezonhub/x/rvalidator/keeper"
-	"github.com/mezonhub/mezonhub/x/rvalidator/types"
+	"github.com/mezonhub/mezonhub/x/zvalidator/keeper"
+	"github.com/mezonhub/mezonhub/x/zvalidator/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmdb "github.com/tendermint/tm-db"
 )
 
-func RvalidatorKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
+func ZvalidatorKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 	storeKey := sdk.NewKVStoreKey(types.StoreKey)
 	memStoreKey := storetypes.NewMemoryStoreKey(types.MemStoreKey)
 
@@ -34,10 +34,10 @@ func RvalidatorKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 		types.Amino,
 		storeKey,
 		memStoreKey,
-		"RvalidatorParams",
+		"ZvalidatorParams",
 	)
 	sudoKeeper, _ := SudoKeeper(t)
-	rbankKeeper, _ := RbankKeeper(t)
+	zbankKeeper, _ := ZbankKeeper(t)
 	ledgerKeeper, _ := LedgerKeeper(t)
 	k := keeper.NewKeeper(
 		cdc,
@@ -45,7 +45,7 @@ func RvalidatorKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 		memStoreKey,
 		paramsSubspace,
 		sudoKeeper,
-		rbankKeeper,
+		zbankKeeper,
 		ledgerKeeper,
 	)
 

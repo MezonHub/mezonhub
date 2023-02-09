@@ -27,7 +27,7 @@ import (
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	miningtypes "github.com/mezonhub/mezonhub/x/mining/types"
-	rdextypes "github.com/mezonhub/mezonhub/x/rdex/types"
+	zdextypes "github.com/mezonhub/mezonhub/x/zdex/types"
 )
 
 var (
@@ -90,7 +90,7 @@ func NewAccountKeeper(encCfg *params.EncodingConfig, paramsKeeper *paramskeeper.
 		stakingtypes.NotBondedPoolName: {authtypes.Burner, authtypes.Staking},
 		stakingtypes.BondedPoolName:    {authtypes.Burner, authtypes.Staking},
 		types.ModuleName:               {authtypes.Burner, authtypes.Minter},
-		rdextypes.ModuleName:           {authtypes.Burner, authtypes.Minter},
+		zdextypes.ModuleName:           {authtypes.Burner, authtypes.Minter},
 		miningtypes.ModuleName:         {authtypes.Burner, authtypes.Minter},
 	}
 

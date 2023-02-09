@@ -464,7 +464,7 @@ func ModuleAddrCmd() *cobra.Command {
 		Long: fmt.Sprintf(`Convert module name to bech32 address.
 
 Example:
-$ %s debug module-addr rdex
+$ %s debug module-addr zdex
 			`, "mezon"),
 		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

@@ -38,7 +38,7 @@ func MiningKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 	)
 
 	sudoKeeper, _ := SudoKeeper(t)
-	rdexKeeper, _ := RdexKeeper(t)
+	zdexKeeper, _ := ZdexKeeper(t)
 
 	k := keeper.NewKeeper(
 		cdc,
@@ -47,7 +47,7 @@ func MiningKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 		paramsSubspace,
 		sudoKeeper,
 		BankKeeper,
-		rdexKeeper,
+		zdexKeeper,
 	)
 
 	ctx := sdk.NewContext(stateStore, tmproto.Header{}, false, log.NewNopLogger())

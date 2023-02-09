@@ -10,8 +10,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	typesparams "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/mezonhub/mezonhub/x/rstaking/keeper"
-	"github.com/mezonhub/mezonhub/x/rstaking/types"
+	"github.com/mezonhub/mezonhub/x/zstaking/keeper"
+	"github.com/mezonhub/mezonhub/x/zstaking/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
@@ -23,7 +23,7 @@ var (
 	rstakeOnce        sync.Once
 )
 
-func RStakingKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
+func ZStakingKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 	rstakeOnce.Do(func() {
 		stateStore.MountStoreWithDB(rstakeStoreKey, sdk.StoreTypeIAVL, db)
 		stateStore.MountStoreWithDB(rstakeMemStoreKey, sdk.StoreTypeMemory, nil)
@@ -36,7 +36,7 @@ func RStakingKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 		types.Amino,
 		rstakeStoreKey,
 		rstakeMemStoreKey,
-		"RStakingParams",
+		"ZStakingParams",
 	)
 
 	sudoKeeper, _ := SudoKeeper(t)

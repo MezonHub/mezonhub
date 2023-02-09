@@ -5,12 +5,12 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/mezonhub/mezonhub/x/ledger/keeper"
 	"github.com/mezonhub/mezonhub/x/ledger/types"
-	rvotetypes "github.com/mezonhub/mezonhub/x/rvote/types"
+	zvotetypes "github.com/mezonhub/mezonhub/x/zvote/types"
 )
 
 // NewParamChangeProposalHandler creates a new governance Handler for a ParamChangeProposal
-func NewProposalHandler(k keeper.Keeper) rvotetypes.Handler {
-	return func(ctx sdk.Context, content rvotetypes.Content) error {
+func NewProposalHandler(k keeper.Keeper) zvotetypes.Handler {
+	return func(ctx sdk.Context, content zvotetypes.Content) error {
 		switch c := content.(type) {
 		case *types.SetChainEraProposal:
 			return k.ProcessSetChainEraProposal(ctx, c)

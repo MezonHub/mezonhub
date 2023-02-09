@@ -10,7 +10,7 @@ type SudoKeeper interface {
 	GetAdmin(ctx sdk.Context) sdk.AccAddress
 }
 
-type RBankKeeper interface {
+type ZBankKeeper interface {
 	CheckAccAddress(ctx sdk.Context, denom, address string) error
 	CheckValAddress(ctx sdk.Context, denom, address string) error
 }

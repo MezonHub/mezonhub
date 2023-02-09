@@ -8,23 +8,23 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	ledgermodule "github.com/mezonhub/mezonhub/x/ledger"
 	ledgertypes "github.com/mezonhub/mezonhub/x/ledger/types"
-	"github.com/mezonhub/mezonhub/x/rvote/keeper"
-	"github.com/mezonhub/mezonhub/x/rvote/types"
+	"github.com/mezonhub/mezonhub/x/zvote/keeper"
+	"github.com/mezonhub/mezonhub/x/zvote/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )
 
 var (
-	rvoteStoreKey    = sdk.NewKVStoreKey(types.StoreKey)
-	rvoteMemStoreKey = storetypes.NewMemoryStoreKey(types.MemStoreKey)
-	rvoteOnce        sync.Once
+	zvoteStoreKey    = sdk.NewKVStoreKey(types.StoreKey)
+	zvoteMemStoreKey = storetypes.NewMemoryStoreKey(types.MemStoreKey)
+	zvoteOnce        sync.Once
 )
 
 func RvoteKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
-	rvoteOnce.Do(func() {
-		stateStore.MountStoreWithDB(rvoteStoreKey, sdk.StoreTypeIAVL, db)
-		stateStore.MountStoreWithDB(rvoteMemStoreKey, sdk.StoreTypeMemory, nil)
+	zvoteOnce.Do(func() {
+		stateStore.MountStoreWithDB(zvoteStoreKey, sdk.StoreTypeIAVL, db)
+		stateStore.MountStoreWithDB(zvoteMemStoreKey, sdk.StoreTypeMemory, nil)
 	})
 
 	sudoKeeper, _ := SudoKeeper(t)
@@ -32,18 +32,18 @@ func RvoteKeeper(t testing.TB) (*keeper.Keeper, sdk.Context) {
 	ledgerKeeper, _ := LedgerKeeper(t)
 	require.NoError(t, stateStore.LoadLatestVersion())
 
-	rvoteRouter := types.NewRouter()
-	rvoteRouter.AddRoute(ledgertypes.RouterKey, ledgermodule.NewProposalHandler(ledgerKeeper))
-	rvoteKeeper := keeper.NewKeeper(
+	zvoteRouter := types.NewRouter()
+	zvoteRouter.AddRoute(ledgertypes.RouterKey, ledgermodule.NewProposalHandler(ledgerKeeper))
+	zvoteKeeper := keeper.NewKeeper(
 		cdc,
-		rvoteStoreKey,
-		rvoteMemStoreKey,
+		zvoteStoreKey,
+		zvoteMemStoreKey,
 
 		sudoKeeper,
 		relayersKeeper,
-		rvoteRouter,
+		zvoteRouter,
 	)
 
 	ctx := sdk.NewContext(stateStore, tmproto.Header{}, false, log.NewNopLogger())
-	return rvoteKeeper, ctx
+	return zvoteKeeper, ctx
 }

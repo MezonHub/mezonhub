@@ -27,7 +27,7 @@ type (
 		bankKeeper       types.BankKeeper
 		relayerKeeper    types.RelayerKeeper
 		mintrewardKeeper types.MintRewardKeeper
-		rbankKeeper      types.RBankKeeper
+		zbankKeeper      types.ZBankKeeper
 
 		ICAControllerKeeper icacontrollerkeeper.Keeper
 		scopedKeeper        capabilitykeeper.ScopedKeeper
@@ -43,7 +43,7 @@ func NewKeeper(
 	bankKeeper types.BankKeeper,
 	relayerKeeper types.RelayerKeeper,
 	mintrewardKeeper types.MintRewardKeeper,
-	rbankKeeepr types.RBankKeeper,
+	zbankKeeepr types.ZBankKeeper,
 
 	icaControllerKeeper icacontrollerkeeper.Keeper,
 	scopedKeeper capabilitykeeper.ScopedKeeper,
@@ -57,7 +57,7 @@ func NewKeeper(
 		bankKeeper:       bankKeeper,
 		relayerKeeper:    relayerKeeper,
 		mintrewardKeeper: mintrewardKeeper,
-		rbankKeeper:      rbankKeeepr,
+		zbankKeeper:      zbankKeeepr,
 
 		ICAControllerKeeper: icaControllerKeeper,
 		scopedKeeper:        scopedKeeper,
@@ -248,7 +248,7 @@ func (k Keeper) GetAllTotalProtocolFee(ctx sdk.Context) (list []*types.TotalProt
 
 func (k Keeper) CheckAddress(ctx sdk.Context, denom string, addresses ...string) error {
 	for _, addr := range addresses {
-		err := k.rbankKeeper.CheckAccAddress(ctx, denom, addr)
+		err := k.zbankKeeper.CheckAccAddress(ctx, denom, addr)
 		if err != nil {
 			return err
 		}

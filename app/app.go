@@ -114,27 +114,27 @@ import (
 	miningmodule "github.com/mezonhub/mezonhub/x/mining"
 	miningmodulekeeper "github.com/mezonhub/mezonhub/x/mining/keeper"
 	miningmoduletypes "github.com/mezonhub/mezonhub/x/mining/types"
-	rbankmodule "github.com/mezonhub/mezonhub/x/rbank"
-	rbankmodulekeeper "github.com/mezonhub/mezonhub/x/rbank/keeper"
-	rbankmoduletypes "github.com/mezonhub/mezonhub/x/rbank/types"
-	rdexmodule "github.com/mezonhub/mezonhub/x/rdex"
-	rdexmodulekeeper "github.com/mezonhub/mezonhub/x/rdex/keeper"
-	rdexmoduletypes "github.com/mezonhub/mezonhub/x/rdex/types"
+	zbankmodule "github.com/mezonhub/mezonhub/x/zbank"
+	zbankmodulekeeper "github.com/mezonhub/mezonhub/x/zbank/keeper"
+	zbankmoduletypes "github.com/mezonhub/mezonhub/x/zbank/types"
+	zdexmodule "github.com/mezonhub/mezonhub/x/zdex"
+	zdexmodulekeeper "github.com/mezonhub/mezonhub/x/zdex/keeper"
+	zdexmoduletypes "github.com/mezonhub/mezonhub/x/zdex/types"
 	"github.com/mezonhub/mezonhub/x/relayers"
 	relayerskeeper "github.com/mezonhub/mezonhub/x/relayers/keeper"
 	relayerstypes "github.com/mezonhub/mezonhub/x/relayers/types"
-	rmintrewardmodule "github.com/mezonhub/mezonhub/x/rmintreward"
-	rmintrewardmodulekeeper "github.com/mezonhub/mezonhub/x/rmintreward/keeper"
-	rmintrewardmoduletypes "github.com/mezonhub/mezonhub/x/rmintreward/types"
-	rstakingmodule "github.com/mezonhub/mezonhub/x/rstaking"
-	rstakingmodulekeeper "github.com/mezonhub/mezonhub/x/rstaking/keeper"
-	rstakingmoduletypes "github.com/mezonhub/mezonhub/x/rstaking/types"
-	"github.com/mezonhub/mezonhub/x/rvalidator"
-	rvalidatormodulekeeper "github.com/mezonhub/mezonhub/x/rvalidator/keeper"
-	rvalidatormoduletypes "github.com/mezonhub/mezonhub/x/rvalidator/types"
-	"github.com/mezonhub/mezonhub/x/rvote"
-	rvotekeeper "github.com/mezonhub/mezonhub/x/rvote/keeper"
-	rvotetypes "github.com/mezonhub/mezonhub/x/rvote/types"
+	zmintrewardmodule "github.com/mezonhub/mezonhub/x/zmintreward"
+	zmintrewardmodulekeeper "github.com/mezonhub/mezonhub/x/zmintreward/keeper"
+	zmintrewardmoduletypes "github.com/mezonhub/mezonhub/x/zmintreward/types"
+	zstakingmodule "github.com/mezonhub/mezonhub/x/zstaking"
+	zstakingmodulekeeper "github.com/mezonhub/mezonhub/x/zstaking/keeper"
+	zstakingmoduletypes "github.com/mezonhub/mezonhub/x/zstaking/types"
+	"github.com/mezonhub/mezonhub/x/zvalidator"
+	zvalidatormodulekeeper "github.com/mezonhub/mezonhub/x/zvalidator/keeper"
+	zvalidatormoduletypes "github.com/mezonhub/mezonhub/x/zvalidator/types"
+	"github.com/mezonhub/mezonhub/x/zvote"
+	zvotekeeper "github.com/mezonhub/mezonhub/x/zvote/keeper"
+	zvotetypes "github.com/mezonhub/mezonhub/x/zvote/types"
 	"github.com/mezonhub/mezonhub/x/sudo"
 	sudokeeper "github.com/mezonhub/mezonhub/x/sudo/keeper"
 	sudotypes "github.com/mezonhub/mezonhub/x/sudo/types"
@@ -200,14 +200,14 @@ var (
 		sudo.AppModuleBasic{},
 		relayers.AppModuleBasic{},
 		ledger.AppModuleBasic{},
-		rvote.AppModuleBasic{},
-		rstakingmodule.AppModuleBasic{},
+		zvote.AppModuleBasic{},
+		zstakingmodule.AppModuleBasic{},
 		bridgemodule.AppModuleBasic{},
-		rmintrewardmodule.AppModuleBasic{},
-		rbankmodule.AppModuleBasic{},
-		rdexmodule.AppModuleBasic{},
+		zmintrewardmodule.AppModuleBasic{},
+		zbankmodule.AppModuleBasic{},
+		zdexmodule.AppModuleBasic{},
 		miningmodule.AppModuleBasic{},
-		rvalidator.AppModuleBasic{},
+		zvalidator.AppModuleBasic{},
 		claim.AppModuleBasic{},
 		// this line is used by starport scaffolding # stargate/app/moduleBasic
 	)
@@ -222,10 +222,10 @@ var (
 		govtypes.ModuleName:               {authtypes.Burner},
 		ibctransfertypes.ModuleName:       {authtypes.Minter, authtypes.Burner},
 		ledgertypes.ModuleName:            {authtypes.Minter, authtypes.Burner},
-		rstakingmoduletypes.ModuleName:    {authtypes.Burner, authtypes.Minter},
+		zstakingmoduletypes.ModuleName:    {authtypes.Burner, authtypes.Minter},
 		bridgemoduletypes.ModuleName:      {authtypes.Burner, authtypes.Minter},
-		rmintrewardmoduletypes.ModuleName: nil,
-		rdexmoduletypes.ModuleName:        {authtypes.Burner, authtypes.Minter},
+		zmintrewardmoduletypes.ModuleName: nil,
+		zdexmoduletypes.ModuleName:        {authtypes.Burner, authtypes.Minter},
 		miningmoduletypes.ModuleName:      nil,
 		icatypes.ModuleName:               nil,
 		claimmoduletypes.ModuleName:       nil,
@@ -297,21 +297,21 @@ type App struct {
 
 	LedgerKeeper ledgerkeeper.Keeper
 
-	RvoteKeeper rvotekeeper.Keeper
+	RvoteKeeper zvotekeeper.Keeper
 
-	RStakingKeeper rstakingmodulekeeper.Keeper
+	ZStakingKeeper zstakingmodulekeeper.Keeper
 
 	BridgeKeeper bridgemodulekeeper.Keeper
 
-	RmintrewardKeeper rmintrewardmodulekeeper.Keeper
+	ZmintrewardKeeper zmintrewardmodulekeeper.Keeper
 
-	RbankKeeper rbankmodulekeeper.Keeper
+	ZbankKeeper zbankmodulekeeper.Keeper
 
-	RdexKeeper rdexmodulekeeper.Keeper
+	ZdexKeeper zdexmodulekeeper.Keeper
 
 	MiningKeeper miningmodulekeeper.Keeper
 
-	RValidatorKeeper rvalidatormodulekeeper.Keeper
+	ZValidatorKeeper zvalidatormodulekeeper.Keeper
 
 	ClaimKeeper claimmodulekeeper.Keeper
 	// this line is used by starport scaffolding # stargate/app/keeperDeclaration
@@ -363,14 +363,14 @@ func New(
 		sudotypes.StoreKey,
 		relayerstypes.StoreKey,
 		ledgertypes.StoreKey,
-		rvotetypes.StoreKey,
-		rstakingmoduletypes.StoreKey,
+		zvotetypes.StoreKey,
+		zstakingmoduletypes.StoreKey,
 		bridgemoduletypes.StoreKey,
-		rmintrewardmoduletypes.StoreKey,
-		rbankmoduletypes.StoreKey,
-		rdexmoduletypes.StoreKey,
+		zmintrewardmoduletypes.StoreKey,
+		zbankmoduletypes.StoreKey,
+		zdexmoduletypes.StoreKey,
 		miningmoduletypes.StoreKey,
-		rvalidatormoduletypes.StoreKey,
+		zvalidatormoduletypes.StoreKey,
 		claimmoduletypes.StoreKey,
 		// this line is used by starport scaffolding # stargate/app/storeKey
 	)
@@ -433,11 +433,11 @@ func New(
 		keys[sudotypes.MemStoreKey],
 	)
 
-	rstakingKeeper := rstakingmodulekeeper.NewKeeper(
+	zstakingKeeper := zstakingmodulekeeper.NewKeeper(
 		appCodec,
-		keys[rstakingmoduletypes.StoreKey],
-		keys[rstakingmoduletypes.MemStoreKey],
-		app.GetSubspace(rstakingmoduletypes.ModuleName),
+		keys[zstakingmoduletypes.StoreKey],
+		keys[zstakingmoduletypes.MemStoreKey],
+		app.GetSubspace(zstakingmoduletypes.ModuleName),
 		app.BankKeeper,
 		app.SudoKeeper,
 		authtypes.FeeCollectorName,
@@ -447,7 +447,7 @@ func New(
 		appCodec,
 		keys[minttypes.StoreKey],
 		app.GetSubspace(minttypes.ModuleName),
-		rstakingKeeper,
+		zstakingKeeper,
 		app.AccountKeeper,
 		app.BankKeeper,
 		authtypes.FeeCollectorName,
@@ -491,7 +491,7 @@ func New(
 	// register the staking hooks
 	// NOTE: stakingKeeper above is passed by reference, so that it will contain these hooks
 	app.StakingKeeper = *stakingKeeper.SetHooks(
-		stakingtypes.NewMultiStakingHooks(rstakingKeeper.Hooks(), app.DistrKeeper.Hooks(), app.SlashingKeeper.Hooks()),
+		stakingtypes.NewMultiStakingHooks(zstakingKeeper.Hooks(), app.DistrKeeper.Hooks(), app.SlashingKeeper.Hooks()),
 	)
 
 	// ... other modules keepers
@@ -577,15 +577,15 @@ func New(
 		govRouter,
 	)
 
-	app.RbankKeeper = *rbankmodulekeeper.NewKeeper(
+	app.ZbankKeeper = *zbankmodulekeeper.NewKeeper(
 		appCodec,
-		keys[rbankmoduletypes.StoreKey],
-		keys[rbankmoduletypes.MemStoreKey],
-		app.GetSubspace(rbankmoduletypes.ModuleName),
+		keys[zbankmoduletypes.StoreKey],
+		keys[zbankmoduletypes.MemStoreKey],
+		app.GetSubspace(zbankmoduletypes.ModuleName),
 		app.SudoKeeper,
 		app.BankKeeper,
 	)
-	rbankModule := rbankmodule.NewAppModule(appCodec, app.RbankKeeper)
+	zbankModule := zbankmodule.NewAppModule(appCodec, app.ZbankKeeper)
 
 	app.RelayersKeeper = *relayerskeeper.NewKeeper(
 		appCodec,
@@ -595,11 +595,11 @@ func New(
 		app.BankKeeper,
 	)
 
-	app.RmintrewardKeeper = *rmintrewardmodulekeeper.NewKeeper(
+	app.ZmintrewardKeeper = *zmintrewardmodulekeeper.NewKeeper(
 		appCodec,
-		keys[rmintrewardmoduletypes.StoreKey],
-		keys[rmintrewardmoduletypes.MemStoreKey],
-		app.GetSubspace(rmintrewardmoduletypes.ModuleName),
+		keys[zmintrewardmoduletypes.StoreKey],
+		keys[zmintrewardmoduletypes.MemStoreKey],
+		app.GetSubspace(zmintrewardmoduletypes.ModuleName),
 		app.SudoKeeper,
 		app.BankKeeper,
 	)
@@ -613,8 +613,8 @@ func New(
 		app.SudoKeeper,
 		app.BankKeeper,
 		app.RelayersKeeper,
-		app.RmintrewardKeeper,
-		app.RbankKeeper,
+		app.ZmintrewardKeeper,
+		app.ZbankKeeper,
 		app.ICAControllerKeeper,
 		scopedLedgerKeeper,
 	)
@@ -622,16 +622,16 @@ func New(
 	// create ica controller ibcmodule
 	icaControllerIBCModule := icacontroller.NewIBCModule(app.ICAControllerKeeper, ledgerIBCModule)
 
-	app.RValidatorKeeper = *rvalidatormodulekeeper.NewKeeper(
+	app.ZValidatorKeeper = *zvalidatormodulekeeper.NewKeeper(
 		appCodec,
-		keys[rvalidatormoduletypes.StoreKey],
-		keys[rvalidatormoduletypes.MemStoreKey],
-		app.GetSubspace(rvalidatormoduletypes.ModuleName),
+		keys[zvalidatormoduletypes.StoreKey],
+		keys[zvalidatormoduletypes.MemStoreKey],
+		app.GetSubspace(zvalidatormoduletypes.ModuleName),
 		app.SudoKeeper,
-		app.RbankKeeper,
+		app.ZbankKeeper,
 		app.LedgerKeeper,
 	)
-	rvalidatorModule := rvalidator.NewAppModule(appCodec, app.RValidatorKeeper, app.AccountKeeper, app.BankKeeper)
+	zvalidatorModule := zvalidator.NewAppModule(appCodec, app.ZValidatorKeeper, app.AccountKeeper, app.BankKeeper)
 
 	app.ClaimKeeper = *claimmodulekeeper.NewKeeper(
 		appCodec,
@@ -643,21 +643,21 @@ func New(
 	)
 	claimModule := claim.NewAppModule(appCodec, app.ClaimKeeper, app.AccountKeeper, app.BankKeeper)
 
-	rvoteRouter := rvotetypes.NewRouter()
-	rvoteRouter.AddRoute(ledgertypes.RouterKey, ledger.NewProposalHandler(app.LedgerKeeper))
-	rvoteRouter.AddRoute(rvalidatormoduletypes.RouterKey, rvalidator.NewProposalHandler(app.RValidatorKeeper))
+	zvoteRouter := zvotetypes.NewRouter()
+	zvoteRouter.AddRoute(ledgertypes.RouterKey, ledger.NewProposalHandler(app.LedgerKeeper))
+	zvoteRouter.AddRoute(zvalidatormoduletypes.RouterKey, zvalidator.NewProposalHandler(app.ZValidatorKeeper))
 
-	app.RvoteKeeper = *rvotekeeper.NewKeeper(
+	app.RvoteKeeper = *zvotekeeper.NewKeeper(
 		appCodec,
-		keys[rvotetypes.StoreKey],
-		keys[rvotetypes.MemStoreKey],
+		keys[zvotetypes.StoreKey],
+		keys[zvotetypes.MemStoreKey],
 		app.SudoKeeper,
 		app.RelayersKeeper,
-		rvoteRouter,
+		zvoteRouter,
 	)
 
-	app.RStakingKeeper = *rstakingKeeper
-	rstakingModule := rstakingmodule.NewAppModule(appCodec, app.RStakingKeeper, app.MintKeeper)
+	app.ZStakingKeeper = *zstakingKeeper
+	zstakingModule := zstakingmodule.NewAppModule(appCodec, app.ZStakingKeeper, app.MintKeeper)
 
 	app.BridgeKeeper = *bridgemodulekeeper.NewKeeper(
 		appCodec,
@@ -670,17 +670,17 @@ func New(
 	)
 	bridgeModule := bridgemodule.NewAppModule(appCodec, app.BridgeKeeper, app.AccountKeeper, app.BankKeeper)
 
-	rmintrewardModule := rmintrewardmodule.NewAppModule(appCodec, app.RmintrewardKeeper, app.AccountKeeper, app.BankKeeper)
+	zmintrewardModule := zmintrewardmodule.NewAppModule(appCodec, app.ZmintrewardKeeper, app.AccountKeeper, app.BankKeeper)
 
-	app.RdexKeeper = *rdexmodulekeeper.NewKeeper(
+	app.ZdexKeeper = *zdexmodulekeeper.NewKeeper(
 		appCodec,
-		keys[rdexmoduletypes.StoreKey],
-		keys[rdexmoduletypes.MemStoreKey],
-		app.GetSubspace(rdexmoduletypes.ModuleName),
+		keys[zdexmoduletypes.StoreKey],
+		keys[zdexmoduletypes.MemStoreKey],
+		app.GetSubspace(zdexmoduletypes.ModuleName),
 		app.BankKeeper,
 		app.SudoKeeper,
 	)
-	rdexModule := rdexmodule.NewAppModule(appCodec, app.RdexKeeper, app.AccountKeeper, app.BankKeeper)
+	zdexModule := zdexmodule.NewAppModule(appCodec, app.ZdexKeeper, app.AccountKeeper, app.BankKeeper)
 
 	app.MiningKeeper = *miningmodulekeeper.NewKeeper(
 		appCodec,
@@ -689,7 +689,7 @@ func New(
 		app.GetSubspace(miningmoduletypes.ModuleName),
 		app.SudoKeeper,
 		app.BankKeeper,
-		app.RdexKeeper,
+		app.ZdexKeeper,
 	)
 	miningModule := miningmodule.NewAppModule(appCodec, app.MiningKeeper, app.AccountKeeper, app.BankKeeper)
 
@@ -737,15 +737,15 @@ func New(
 		sudo.NewAppModule(appCodec, app.SudoKeeper),
 		relayers.NewAppModule(appCodec, app.RelayersKeeper),
 		ledger.NewAppModule(appCodec, app.LedgerKeeper),
-		rvalidatorModule,
+		zvalidatorModule,
 		claimModule,
-		rvote.NewAppModule(appCodec, app.RvoteKeeper),
+		zvote.NewAppModule(appCodec, app.RvoteKeeper),
 
-		rstakingModule,
+		zstakingModule,
 		bridgeModule,
-		rmintrewardModule,
-		rbankModule,
-		rdexModule,
+		zmintrewardModule,
+		zbankModule,
+		zdexModule,
 		miningModule,
 		// this line is used by starport scaffolding # stargate/app/appModule
 	)
@@ -754,12 +754,12 @@ func New(
 	// there is nothing left over in the validator fee pool, so as to keep the
 	// CanWithdrawInvariant invariant.
 	// NOTE: staking module is required if HistoricalEntries param > 0
-	// NOTE: rstaking module should happens after mint module and before distribution module, as it will burn minted coins
+	// NOTE: zstaking module should happens after mint module and before distribution module, as it will burn minted coins
 	app.mm.SetOrderBeginBlockers(
 		upgradetypes.ModuleName,
 		capabilitytypes.ModuleName,
 		minttypes.ModuleName,
-		rstakingmoduletypes.ModuleName,
+		zstakingmoduletypes.ModuleName,
 		distrtypes.ModuleName,
 		slashingtypes.ModuleName,
 		evidencetypes.ModuleName,
@@ -778,13 +778,13 @@ func New(
 		ibctransfertypes.ModuleName,
 		icatypes.ModuleName,
 		relayerstypes.ModuleName,
-		rvotetypes.ModuleName,
+		zvotetypes.ModuleName,
 		bridgemoduletypes.ModuleName,
-		rmintrewardmoduletypes.ModuleName,
-		rbankmoduletypes.ModuleName,
-		rdexmoduletypes.ModuleName,
+		zmintrewardmoduletypes.ModuleName,
+		zbankmoduletypes.ModuleName,
+		zdexmoduletypes.ModuleName,
 		miningmoduletypes.ModuleName,
-		rvalidatormoduletypes.ModuleName,
+		zvalidatormoduletypes.ModuleName,
 		claimmoduletypes.ModuleName,
 	)
 
@@ -795,7 +795,7 @@ func New(
 		upgradetypes.ModuleName,
 		capabilitytypes.ModuleName,
 		minttypes.ModuleName,
-		rstakingmoduletypes.ModuleName,
+		zstakingmoduletypes.ModuleName,
 		distrtypes.ModuleName,
 		slashingtypes.ModuleName,
 		evidencetypes.ModuleName,
@@ -811,13 +811,13 @@ func New(
 		ibctransfertypes.ModuleName,
 		icatypes.ModuleName,
 		relayerstypes.ModuleName,
-		rvotetypes.ModuleName,
+		zvotetypes.ModuleName,
 		bridgemoduletypes.ModuleName,
-		rmintrewardmoduletypes.ModuleName,
-		rbankmoduletypes.ModuleName,
-		rdexmoduletypes.ModuleName,
+		zmintrewardmoduletypes.ModuleName,
+		zbankmoduletypes.ModuleName,
+		zdexmoduletypes.ModuleName,
 		miningmoduletypes.ModuleName,
-		rvalidatormoduletypes.ModuleName,
+		zvalidatormoduletypes.ModuleName,
 		claimmoduletypes.ModuleName,
 	)
 
@@ -826,7 +826,7 @@ func New(
 	// NOTE: Capability module must occur first so that it can initialize any capabilities
 	// so that other modules that want to create or claim capabilities afterwards in InitChain
 	// can do so safely.
-	// NOTE: rstaking module must occur after auth/bank/mint moduels so that coinToBeBurned can be set rightly and must
+	// NOTE: zstaking module must occur after auth/bank/mint moduels so that coinToBeBurned can be set rightly and must
 	// before staking module so that hooks can work rightly.
 	app.mm.SetOrderInitGenesis(
 		capabilitytypes.ModuleName,
@@ -834,7 +834,7 @@ func New(
 		banktypes.ModuleName,
 		distrtypes.ModuleName,
 		minttypes.ModuleName,
-		rstakingmoduletypes.ModuleName,
+		zstakingmoduletypes.ModuleName,
 		stakingtypes.ModuleName,
 		slashingtypes.ModuleName,
 		govtypes.ModuleName,
@@ -851,13 +851,13 @@ func New(
 		sudotypes.ModuleName,
 		relayerstypes.ModuleName,
 		ledgertypes.ModuleName,
-		rvotetypes.ModuleName,
+		zvotetypes.ModuleName,
 		bridgemoduletypes.ModuleName,
-		rmintrewardmoduletypes.ModuleName,
-		rbankmoduletypes.ModuleName,
-		rdexmoduletypes.ModuleName,
+		zmintrewardmoduletypes.ModuleName,
+		zbankmoduletypes.ModuleName,
+		zdexmoduletypes.ModuleName,
 		miningmoduletypes.ModuleName,
-		rvalidatormoduletypes.ModuleName,
+		zvalidatormoduletypes.ModuleName,
 		claimmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	)
@@ -1059,14 +1059,14 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 	paramsKeeper.Subspace(sudotypes.ModuleName)
 	paramsKeeper.Subspace(relayerstypes.ModuleName)
 	paramsKeeper.Subspace(ledgertypes.ModuleName)
-	paramsKeeper.Subspace(rvotetypes.ModuleName)
-	paramsKeeper.Subspace(rstakingmoduletypes.ModuleName)
+	paramsKeeper.Subspace(zvotetypes.ModuleName)
+	paramsKeeper.Subspace(zstakingmoduletypes.ModuleName)
 	paramsKeeper.Subspace(bridgemoduletypes.ModuleName)
-	paramsKeeper.Subspace(rmintrewardmoduletypes.ModuleName)
-	paramsKeeper.Subspace(rbankmoduletypes.ModuleName)
-	paramsKeeper.Subspace(rdexmoduletypes.ModuleName)
+	paramsKeeper.Subspace(zmintrewardmoduletypes.ModuleName)
+	paramsKeeper.Subspace(zbankmoduletypes.ModuleName)
+	paramsKeeper.Subspace(zdexmoduletypes.ModuleName)
 	paramsKeeper.Subspace(miningmoduletypes.ModuleName)
-	paramsKeeper.Subspace(rvalidatormoduletypes.ModuleName)
+	paramsKeeper.Subspace(zvalidatormoduletypes.ModuleName)
 	paramsKeeper.Subspace(claimmoduletypes.ModuleName)
 	// this line is used by starport scaffolding # stargate/app/paramSubspace
 
