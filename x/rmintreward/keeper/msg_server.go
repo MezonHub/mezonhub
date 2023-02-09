@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/stafihub/stafihub/x/rmintreward/types"
+	"github.com/mezonhub/mezonhub/x/rmintreward/types"
 )
 
 type msgServer struct {

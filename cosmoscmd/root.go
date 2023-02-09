@@ -136,7 +136,7 @@ func NewRootCmd(
 
 	rootCmd := &cobra.Command{
 		Use:   appName + "d",
-		Short: "StafiHub App",
+		Short: "MezonHub App",
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 			initClientCtx, err := client.ReadPersistentCommandFlags(initClientCtx, cmd.Flags())
 			if err != nil {
@@ -465,7 +465,7 @@ func ModuleAddrCmd() *cobra.Command {
 
 Example:
 $ %s debug module-addr rdex
-			`, "stafihubd"),
+			`, "mezon"),
 		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 

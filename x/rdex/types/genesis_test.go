@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/stafihub/stafihub/x/rdex/types"
+	"github.com/mezonhub/mezonhub/x/rdex/types"
 	"github.com/stretchr/testify/require"
 )
 

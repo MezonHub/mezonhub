@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/rbank/types"
-	sudoTypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/mezonhub/mezonhub/x/rbank/types"
+	sudoTypes "github.com/mezonhub/mezonhub/x/sudo/types"
 )
 
 func (k msgServer) AddDenom(goCtx context.Context, msg *types.MsgAddDenom) (*types.MsgAddDenomResponse, error) {

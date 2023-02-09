@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/stafihub/stafihub/x/rbank/types"
+	"github.com/mezonhub/mezonhub/x/rbank/types"
 )
 
 type (

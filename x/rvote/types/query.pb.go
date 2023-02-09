@@ -197,10 +197,10 @@ func (m *QueryGetProposalLifeResponse) GetProposalLife() int64 {
 }
 
 func init() {
-	proto.RegisterType((*QueryGetProposalRequest)(nil), "stafihub.stafihub.rvote.QueryGetProposalRequest")
-	proto.RegisterType((*QueryGetProposalResponse)(nil), "stafihub.stafihub.rvote.QueryGetProposalResponse")
-	proto.RegisterType((*QueryGetProposalLifeRequest)(nil), "stafihub.stafihub.rvote.QueryGetProposalLifeRequest")
-	proto.RegisterType((*QueryGetProposalLifeResponse)(nil), "stafihub.stafihub.rvote.QueryGetProposalLifeResponse")
+	proto.RegisterType((*QueryGetProposalRequest)(nil), "mezonhub.mezonhub.rvote.QueryGetProposalRequest")
+	proto.RegisterType((*QueryGetProposalResponse)(nil), "mezonhub.mezonhub.rvote.QueryGetProposalResponse")
+	proto.RegisterType((*QueryGetProposalLifeRequest)(nil), "mezonhub.mezonhub.rvote.QueryGetProposalLifeRequest")
+	proto.RegisterType((*QueryGetProposalLifeResponse)(nil), "mezonhub.mezonhub.rvote.QueryGetProposalLifeResponse")
 }
 
 func init() { proto.RegisterFile("rvote/query.proto", fileDescriptor_fe9488996c0b15b7) }
@@ -258,7 +258,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) GetProposal(ctx context.Context, in *QueryGetProposalRequest, opts ...grpc.CallOption) (*QueryGetProposalResponse, error) {
 	out := new(QueryGetProposalResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.rvote.Query/GetProposal", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/mezonhub.mezonhub.rvote.Query/GetProposal", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -267,7 +267,7 @@ func (c *queryClient) GetProposal(ctx context.Context, in *QueryGetProposalReque
 
 func (c *queryClient) GetProposalLife(ctx context.Context, in *QueryGetProposalLifeRequest, opts ...grpc.CallOption) (*QueryGetProposalLifeResponse, error) {
 	out := new(QueryGetProposalLifeResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.rvote.Query/GetProposalLife", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/mezonhub.mezonhub.rvote.Query/GetProposalLife", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -307,7 +307,7 @@ func _Query_GetProposal_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.rvote.Query/GetProposal",
+		FullMethod: "/mezonhub.mezonhub.rvote.Query/GetProposal",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetProposal(ctx, req.(*QueryGetProposalRequest))
@@ -325,7 +325,7 @@ func _Query_GetProposalLife_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.rvote.Query/GetProposalLife",
+		FullMethod: "/mezonhub.mezonhub.rvote.Query/GetProposalLife",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetProposalLife(ctx, req.(*QueryGetProposalLifeRequest))
@@ -334,7 +334,7 @@ func _Query_GetProposalLife_Handler(srv interface{}, ctx context.Context, dec fu
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "stafihub.stafihub.rvote.Query",
+	ServiceName: "mezonhub.mezonhub.rvote.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

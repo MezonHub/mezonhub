@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/stafihub/stafihub/x/mining/types"
+	"github.com/mezonhub/mezonhub/x/mining/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/stafihub/stafihub/x/rbank/types"
+	"github.com/mezonhub/mezonhub/x/rbank/types"
 	"github.com/stretchr/testify/require"
 )
 

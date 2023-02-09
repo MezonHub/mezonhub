@@ -8,7 +8,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	// "github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/stafihub/stafihub/x/mining/types"
+	"github.com/mezonhub/mezonhub/x/mining/types"
 )
 
 var (

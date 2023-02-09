@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/rdex/types"
+	"github.com/mezonhub/mezonhub/x/rdex/types"
 	"github.com/stretchr/testify/require"
 )
 

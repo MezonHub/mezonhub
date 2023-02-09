@@ -433,12 +433,12 @@ func (m *ShuffleSeconds) GetSeconds() uint64 {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "stafihub.stafihub.rvalidator.GenesisState")
-	proto.RegisterType((*RValidator)(nil), "stafihub.stafihub.rvalidator.RValidator")
-	proto.RegisterType((*DealingRValidator)(nil), "stafihub.stafihub.rvalidator.DealingRValidator")
-	proto.RegisterType((*Cycle)(nil), "stafihub.stafihub.rvalidator.Cycle")
-	proto.RegisterType((*CycleSeconds)(nil), "stafihub.stafihub.rvalidator.CycleSeconds")
-	proto.RegisterType((*ShuffleSeconds)(nil), "stafihub.stafihub.rvalidator.ShuffleSeconds")
+	proto.RegisterType((*GenesisState)(nil), "mezonhub.mezonhub.rvalidator.GenesisState")
+	proto.RegisterType((*RValidator)(nil), "mezonhub.mezonhub.rvalidator.RValidator")
+	proto.RegisterType((*DealingRValidator)(nil), "mezonhub.mezonhub.rvalidator.DealingRValidator")
+	proto.RegisterType((*Cycle)(nil), "mezonhub.mezonhub.rvalidator.Cycle")
+	proto.RegisterType((*CycleSeconds)(nil), "mezonhub.mezonhub.rvalidator.CycleSeconds")
+	proto.RegisterType((*ShuffleSeconds)(nil), "mezonhub.mezonhub.rvalidator.ShuffleSeconds")
 }
 
 func init() { proto.RegisterFile("rvalidator/genesis.proto", fileDescriptor_ab550827adf3778b) }

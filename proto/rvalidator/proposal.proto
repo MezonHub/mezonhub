@@ -1,10 +1,10 @@
 syntax = "proto3";
-package stafihub.stafihub.rvalidator;
+package mezonhub.mezonhub.rvalidator;
 
 // this line is used by starport scaffolding # proto/tx/import
 import "gogoproto/gogo.proto";
 import "rvalidator/genesis.proto";
-option go_package = "github.com/stafihub/stafihub/x/rvalidator/types";
+option go_package = "github.com/mezonhub/mezonhub/x/rvalidator/types";
 
 message UpdateRValidatorProposal {
     string creator = 1;

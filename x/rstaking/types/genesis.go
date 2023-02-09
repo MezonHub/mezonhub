@@ -3,7 +3,7 @@ package types
 import (
 	// this line is used by starport scaffolding # genesis/types/import
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/utils"
+	"github.com/mezonhub/mezonhub/utils"
 )
 
 // DefaultIndex is the default capability global index

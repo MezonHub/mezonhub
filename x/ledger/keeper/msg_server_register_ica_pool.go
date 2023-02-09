@@ -4,8 +4,8 @@ import (
 	"context"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/stafihub/stafihub/x/ledger/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/mezonhub/mezonhub/x/ledger/types"
+	sudotypes "github.com/mezonhub/mezonhub/x/sudo/types"
 )
 
 func (k msgServer) RegisterIcaPool(goCtx context.Context, msg *types.MsgRegisterIcaPool) (*types.MsgRegisterIcaPoolResponse, error) {

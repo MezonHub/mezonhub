@@ -6,9 +6,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	ledgertypes "github.com/stafihub/stafihub/x/ledger/types"
-	"github.com/stafihub/stafihub/x/relayers/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	ledgertypes "github.com/mezonhub/mezonhub/x/ledger/types"
+	"github.com/mezonhub/mezonhub/x/relayers/types"
+	sudotypes "github.com/mezonhub/mezonhub/x/sudo/types"
 )
 
 type msgServer struct {

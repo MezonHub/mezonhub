@@ -48,8 +48,8 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
 # process linker flags
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=stafihubd \
-		  -X github.com/cosmos/cosmos-sdk/version.AppName=stafihubd \
+ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=mezon \
+		  -X github.com/cosmos/cosmos-sdk/version.AppName=mezon \
 		  -X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 		  -X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 		  -X "github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)"
@@ -70,21 +70,21 @@ all: tools install lint
 .PHONY:build
 build: go.sum
 ifeq ($(OS),Windows_NT)
-	go build $(BUILD_FLAGS) -o build/stafihubd.exe ./cmd/stafihubd
+	go build $(BUILD_FLAGS) -o build/mezon.exe ./cmd/mezon
 else
-	go build $(BUILD_FLAGS) -o build/stafihubd ./cmd/stafihubd
+	go build $(BUILD_FLAGS) -o build/mezon ./cmd/mezon
 endif
 
 build-linux: go.sum
 	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 $(MAKE) build
 
 build-all-binary: go.sum
-	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-linux-amd64 ./cmd/stafihubd
-	LEDGER_ENABLED=false GOOS=linux GOARCH=arm64 go build $(BUILD_FLAGS) -o build/iris-linux-arm64 ./cmd/stafihubd
-	LEDGER_ENABLED=false GOOS=windows GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-windows-amd64.exe ./cmd/stafihubd
+	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-linux-amd64 ./cmd/mezon
+	LEDGER_ENABLED=false GOOS=linux GOARCH=arm64 go build $(BUILD_FLAGS) -o build/iris-linux-arm64 ./cmd/mezon
+	LEDGER_ENABLED=false GOOS=windows GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-windows-amd64.exe ./cmd/mezon
 
 install: go.sum
-	go install $(BUILD_FLAGS) ./cmd/stafihubd
+	go install $(BUILD_FLAGS) ./cmd/mezon
 
 update-swagger-docs: statik proto-swagger-gen
 	$(BINDIR)/statik -src=lite/swagger-ui -dest=lite -f -m

@@ -2,8 +2,8 @@ package rmintreward
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/rmintreward/keeper"
-	"github.com/stafihub/stafihub/x/rmintreward/types"
+	"github.com/mezonhub/mezonhub/x/rmintreward/keeper"
+	"github.com/mezonhub/mezonhub/x/rmintreward/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

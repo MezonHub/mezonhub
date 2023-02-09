@@ -2,8 +2,8 @@ package sudo
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/sudo/keeper"
-	"github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/mezonhub/mezonhub/x/sudo/keeper"
+	"github.com/mezonhub/mezonhub/x/sudo/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis
